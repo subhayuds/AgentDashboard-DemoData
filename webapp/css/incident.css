@@ -1,0 +1,38 @@
+.incidentNumberDiv {
+	background-color: #FF850C;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-top: -18px;
+}
+
+.incidentTextUnderlineLarge {
+	font-family: calibri light;
+	font-size: 18px;
+	width: 600px;
+	border-bottom: 1px solid #000000;
+}
+
+.incidentTextUnderlineSmall {
+	font-family: calibri light;
+	font-size: 18px;
+	width: 200px;
+	border-bottom: 1px solid #000000;
+}
+
+.incidentTextLabel {
+	font-family: calibri light;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.incidentCustomerDetailsBox {
+	background-color: #D8D8D8;
+	margin-right: 30px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.incidentProgressBar {
+	height: 10px;
+	background: #FF850C;
+}

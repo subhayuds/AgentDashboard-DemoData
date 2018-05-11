@@ -1,0 +1,14 @@
+{
+	"items": [
+		{
+			"prefType": "1",
+			"prefChannel": "1",
+			"prefChannelDetails": "allen.oslon@email.com"
+		},
+		{
+			"prefType": "2",
+			"prefChannel": "2",
+			"prefChannelDetails": "(917) 494-4476"
+		}
+	]
+}

@@ -1,0 +1,249 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:t="sap.ui.table" controllerName="com.hcl.AgentDashboard.controller.BPEM"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page showHeader="false">
+		<content>
+			<Bar class="customBar">
+				<contentLeft>
+					<Button icon="sap-icon://navigation-left-arrow" tooltip="Back" press="onPressBack"/>
+					<Image
+						src="image/EngageLogo.png"
+						densityAware="false"
+						width="154px"
+						height="48px">
+						<layoutData>
+							<FlexItemData growFactor="1" />
+						</layoutData>
+					</Image>
+				</contentLeft>
+				<contentMiddle>
+					<Text text="AGENT WORKBENCH" class="barTitle"/>
+				</contentMiddle>
+				<contentRight>
+					<HBox>
+						<core:Icon
+							src="sap-icon://bell"
+							class="iconSize bellImage sapUiTinyMarginEnd"
+							color="#000000" >
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+						<ImageContent
+							src="image/ProfileImage.png"
+							description="Profile image"
+							class="profileImageContent sapUiTinyMarginBegin sapUiTinyMarginEnd"
+							press="pressProfileImage">
+						</ImageContent>
+						<Text text="Allen Oslon" width="100px" class="sapUiTinyMarginBegin sapUiTinyMarginEnd"/>
+						<core:Icon
+							id="iconUserMenu"
+							src="sap-icon://navigation-down-arrow"
+							class="sapUiTinyMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd"
+							color="#000000"
+							press="onPressUserMenu">
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+					</HBox>
+				</contentRight>
+			</Bar>
+			<VBox alignItems="Center" width="100%">
+				<HBox width="100%">
+					<Text text="Cases" class="formLabels sapUiMediumMarginBegin sapUiMediumMarginTop"/>
+					<Input
+						id="inputTicket"
+						class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+						type="Text"
+						width="400px"/>
+					<Button 
+						id="btnSearch"
+						text="Search"
+						width="7em"
+						class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+						press="onPressSearch"></Button>
+				</HBox>
+				<HBox width="95.5%" height="250px" class="ppAreaBackground sapUiSmallMarginTop sapUiMediumMarginBegin sapUiMediumMarginEnd">
+					<IconTabBar
+						id="idIconTabBPEM"
+						expanded="{device>/isNoPhone}"
+						class="sapUiResponsiveContentPadding">
+						<items>
+							<IconTabFilter text="Overdue">
+								<ScrollContainer
+									height="175px"
+									width="100%"
+									horizontal="false"
+									vertical="true"
+									focusable="true">
+										<t:Table
+										id="tabBPEM"
+										rows="{/items}"
+										selectionMode="None"
+										visibleRowCount="4"
+										cellClick="onPressIncidentList">
+										<t:columns>
+											<t:Column hAlign="Center">
+												<Label text="Case Category" />
+												<t:template>
+													<Label text="{caseCategory}" />
+												</t:template>
+											</t:Column>
+											<t:Column hAlign="Center">
+												<Label text="Case ID" />
+												<t:template>
+													<Label text="{caseID}" />
+												</t:template>
+											</t:Column>
+											<t:Column hAlign="Center" width="5rem">
+												<Label text="Priority" />
+												<t:template>
+													<Label text="{priority}" />
+												</t:template>
+											</t:Column>
+											<t:Column hAlign="Center" width="15rem">
+												<Label text="Description" />
+												<t:template>
+													<Label text="{description}" />
+												</t:template>
+											</t:Column>
+											<t:Column hAlign="Center">
+												<Label text="Object Type" />
+												<t:template>
+													<Label text="{objectType}" />
+												</t:template>
+											</t:Column>
+											<t:Column hAlign="Center" width="10rem">
+												<Label text="Key"/>
+												<t:template>
+													<Label text="{key}" />
+												</t:template>
+											</t:Column>
+											<t:Column hAlign="Center" width="10rem">
+												<Label text="Notes"/>
+												<t:template>
+													<Label text="{notes}" />
+												</t:template>
+											</t:Column>
+										</t:columns>
+									</t:Table>
+								</ScrollContainer>
+							</IconTabFilter>
+							<IconTabFilter text="Due Today">
+								<ScrollContainer
+									height="175px"
+									width="100%"
+									horizontal="false"
+									vertical="true"
+									focusable="true">
+										<t:Table
+										id="tabDueToday"
+										rows="{/items}"
+										selectionMode="None"
+										visibleRowCount="4"
+										cellClick="onPressDueToday">
+										<t:columns>
+											<t:Column hAlign="Center">
+												<Label text="Case Category" />
+												<t:template>
+													<Label text="{caseCategory}" />
+												</t:template>
+											</t:Column>
+											<t:Column hAlign="Center">
+												<Label text="Case ID" />
+												<t:template>
+													<Label text="{caseID}" />
+												</t:template>
+											</t:Column>
+											<t:Column hAlign="Center" width="5rem">
+												<Label text="Priority" />
+												<t:template>
+													<Label text="{priority}" />
+												</t:template>
+											</t:Column>
+											<t:Column hAlign="Center" width="15rem">
+												<Label text="Description" />
+												<t:template>
+													<Label text="{description}" />
+												</t:template>
+											</t:Column>
+											<t:Column hAlign="Center">
+												<Label text="Object Type" />
+												<t:template>
+													<Label text="{objectType}" />
+												</t:template>
+											</t:Column>
+											<t:Column hAlign="Center" width="10rem">
+												<Label text="Key"/>
+												<t:template>
+													<Label text="{key}" />
+												</t:template>
+											</t:Column>
+											<t:Column hAlign="Center" width="10rem">
+												<Label text="Notes"/>
+												<t:template>
+													<Label text="{notes}" />
+												</t:template>
+											</t:Column>
+										</t:columns>
+									</t:Table>
+								</ScrollContainer>
+							</IconTabFilter>
+							<IconTabFilter text="Open">
+								<Text text="Open Items ..." />
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</HBox>
+				<VBox id="vbIncidentDetails" width="95.5%" height="250px" visible="false" class="ppAreaBackground sapUiLargeMarginTop sapUiMediumMarginBegin sapUiMediumMarginEnd">
+					<VBox alignItems="Center" width="175px" height="36px" class="incidentNumberDiv">
+						<Text text="190345678" class="incidentTextLabel fontWhite sapUiTinyMarginTop"/>
+					</VBox>
+					<HBox class="sapUiSmallMarginTop sapUiMediumMarginBegin">
+						<Text text="Description" class="incidentTextLabel"/>
+						<Text id="txtDescription" text="" class="incidentTextUnderlineLarge sapUiTinyMarginBegin"/>
+					</HBox>
+					<HBox class="sapUiSmallMarginTop sapUiMediumMarginBegin">
+						<Text text="Service Category" class="incidentTextLabel"/>
+						<Text text="" class="incidentTextUnderlineSmall sapUiTinyMarginBegin"/>
+						<Text text="Incident Category" class="incidentTextLabel sapUiMediumMarginBegin"/>
+						<Text text="" class="incidentTextUnderlineSmall sapUiTinyMarginBegin"/>
+						<Text text="Cause Category" class="incidentTextLabel sapUiMediumMarginBegin"/>
+						<Text text="" class="incidentTextUnderlineSmall sapUiTinyMarginBegin"/>
+					</HBox>
+					<HBox width="100%">
+						<VBox width="60%">
+							<ProgressIndicator
+								class="incidentProgressBar sapUiMediumMarginBegin sapUiSmallMarginTop sapUiSmallMarginBottom"
+								percentValue="100"
+								displayValue="100%"
+								showValue="false"
+								state="Warning" />
+							<HBox class="sapUiSmallMarginTop sapUiMediumMarginBegin">
+								<Text text="Last Agent Interaction" class="incidentTextLabel"/>
+								<Text text="" class="incidentTextUnderlineSmall sapUiTinyMarginBegin"/>
+							</HBox>
+							<HBox class="sapUiSmallMarginTop sapUiMediumMarginBegin">
+								<Text text="Resolution" class="incidentTextLabel"/>
+								<Text text="" class="incidentTextUnderlineLarge sapUiTinyMarginBegin"/>
+							</HBox>
+						</VBox>
+						<VBox width="40%" alignItems="End">
+							<VBox alignItems="Center" width="60%" height="130px" class="incidentCustomerDetailsBox">
+								<Text text="Customer Details" class="incidentTextLabel sapUiSmallMarginTop"/>
+								<HBox class="sapUiSmallMarginTop sapUiTinyMarginBegin">
+									<Text text="Name" class="incidentTextLabel"/>
+									<Text text="" class="incidentTextUnderlineSmall sapUiTinyMarginBegin"/>
+								</HBox>
+								<HBox class="sapUiSmallMarginTop sapUiTinyMarginBegin">
+									<Text text="Premise" class="incidentTextLabel"/>
+									<Text text="" class="incidentTextUnderlineSmall sapUiTinyMarginBegin"/>
+								</HBox>
+							</VBox>
+						</VBox>
+					</HBox>
+				</VBox>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>

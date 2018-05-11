@@ -1,0 +1,77 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.hcl.AgentDashboard.controller.PaymentFAQ"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<Page showHeader="false">
+		<content>
+			<Bar class="customBar">
+				<contentLeft>
+					<Button icon="sap-icon://navigation-left-arrow" tooltip="Back" press="onPressBack"/>
+					<Image
+						src="image/EngageLogo.png"
+						densityAware="false"
+						width="154px"
+						height="48px">
+						<layoutData>
+							<FlexItemData growFactor="1" />
+						</layoutData>
+					</Image>
+				</contentLeft>
+				<contentMiddle>
+					<Text text="AGENT WORKBENCH" class="barTitle"/>
+				</contentMiddle>
+				<contentRight>
+					<HBox>
+						<core:Icon
+							src="sap-icon://bell"
+							class="iconSize bellImage sapUiTinyMarginEnd"
+							color="#000000" >
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+						<ImageContent
+							src="image/ProfileImage.png"
+							description="Profile image"
+							class="profileImageContent sapUiTinyMarginBegin sapUiTinyMarginEnd"
+							press="pressProfileImage">
+						</ImageContent>
+						<Text text="Allen Oslon" width="100px" class="sapUiTinyMarginBegin sapUiTinyMarginEnd"/>
+						<core:Icon
+							id="iconUserMenu"
+							src="sap-icon://navigation-down-arrow"
+							class="sapUiTinyMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd"
+							color="#000000"
+							press="onPressUserMenu">
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+					</HBox>
+				</contentRight>
+			</Bar>
+			<VBox alignItems="Start" width="95%" class="sapUiMediumMarginBegin">
+				<Text text="Can I sign up for the convenience of pre-authorized payments?" class="sapUiMediumMarginTop faqQuestion fontBold "/>
+				<Text text="Yes, we offer this service. The Pre-authorized Payment Plan (PAP) is one of the easiest, most convenient ways to pay your utility bill.
+				From our page on Payment Options, you can download the PDF form required to sign up for PAP. 
+				Follow the instructions to complete and provide the form to our office, along with a void cheque.
+				To find out more about the convenience and benefits of this payment option please contact customer service at 6XX-5XX-0000." 
+				class="sapUiTinyMarginTop faqAnswers"/>
+				
+				<Text text="How can I pay my bill?" class="sapUiMediumMarginTop faqQuestion fontBold"/>
+				<Text text="We offer a variety of regular payment options including pre-authorized payment, banking, in person, via drop box or mail, or by credit card. 
+				These options are outlined on the back of the billing statement and are also described on our page about payment options." 
+				class="sapUiTinyMarginTop faqAnswers"/>
+				
+				<Text text="Can I sign up for the convenience of equal payments?" class="sapUiMediumMarginTop faqQuestion fontBold"/>
+				<Text text="Yes. The Equal Payment Plan averages your utility costs over a 12-month period so that you pay an equal amount each month. 
+				You will be billed a set amount for eleven months with the close-out amount reflected on the twelfth bill. 
+				This settle-up bill will also detail the new installment amount for the coming eleven months. 
+				If you choose to join an Equal Payment Plan, you will find the current plan balance on the last page of each monthly bill.
+				Your account must be paid in full prior to joining the plan. We only recommend the Equal Payment Plan for accounts with a 12-month billing history at the address.
+				For information on the instalment amount for your address, or to arrange the setup of the plan for your account, please contact customer service at 6XX-5XX-0000 from Monday to Friday between 8 a.m. and 5 p.m." 
+				class="sapUiTinyMarginTop faqAnswers"/>
+			</VBox>
+		</content>
+	</Page>
+	</App>
+</mvc:View>

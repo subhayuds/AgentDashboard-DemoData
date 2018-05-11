@@ -1,0 +1,248 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	controllerName="com.hcl.AgentDashboard.controller.ConsumptionCalculator" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page showHeader="false">
+		<content>
+			<Bar class="customBar">
+				<contentLeft>
+					<Button icon="sap-icon://navigation-left-arrow" tooltip="Back" press="onPressBack"/>
+					<Image
+						src="image/EngageLogo.png"
+						densityAware="false"
+						width="154px"
+						height="48px">
+						<layoutData>
+							<FlexItemData growFactor="1" />
+						</layoutData>
+					</Image>
+				</contentLeft>
+				<contentMiddle>
+					<Text text="AGENT WORKBENCH" class="barTitle"/>
+				</contentMiddle>
+				<contentRight>
+					<HBox>
+						<core:Icon
+							src="sap-icon://bell"
+							class="iconSize bellImage sapUiTinyMarginEnd"
+							color="#000000" >
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+						<ImageContent
+							src="image/ProfileImage.png"
+							description="Profile image"
+							class="profileImageContent sapUiTinyMarginBegin sapUiTinyMarginEnd"
+							press="pressProfileImage">
+						</ImageContent>
+						<Text text="Allen Oslon" width="100px" class="sapUiTinyMarginBegin sapUiTinyMarginEnd"/>
+						<core:Icon
+							id="iconUserMenu"
+							src="sap-icon://navigation-down-arrow"
+							class="sapUiTinyMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd"
+							color="#000000"
+							press="onPressUserMenu">
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+					</HBox>
+				</contentRight>
+			</Bar>
+			<VBox alignItems="Center" width="100%">
+				<HBox width="100%">
+					<Text text="ABOUT YOUR PROPERTY" class="sapUiMediumMarginBegin consumptionPageHeaderTextLine"/>
+				</HBox>
+				<HBox width="100%" class="sapUiSmallMarginTop">
+					<VBox width="65%">
+						<HBox width="100%">
+							<HBox width="65%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Label text="Property Type" class="formLabels"/></VBox>
+							</HBox>
+							<HBox width="35%">
+								<Select width="300px" class="formSelect">
+									<items>
+										<core:Item key="0" text=""/>
+										<core:Item key="1" text="Semi Detached House"/>
+										<core:Item key="2" text="Semi Detached Bunglow"/>
+										<core:Item key="3" text="Mid Terrace House"/>
+										<core:Item key="4" text="Maisonette"/>
+										<core:Item key="5" text="Flat"/>
+										<core:Item key="6" text="End Terrace House"/>
+										<core:Item key="7" text="Detached House"/>
+										<core:Item key="8" text="Detached Bunglow"/>
+									</items>
+								</Select>
+							</HBox>
+						</HBox>
+						<HBox width="100%" class="sapUiTinyMarginTop">
+							<HBox width="65%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Label text="Age of Property" class="formLabels"/></VBox>
+							</HBox>
+							<HBox width="35%">
+								<Select width="300px" class="formSelect">
+									<items>
+										<core:Item key="0" text=""/>
+										<core:Item key="1" text="1960"/>
+										<core:Item key="2" text="1990"/>
+										<core:Item key="3" text="2010"/>
+									</items>
+								</Select>
+							</HBox>
+						</HBox>
+						<HBox width="100%" class="sapUiTinyMarginTop">
+							<HBox width="65%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Label text="Number of Bedrooms" class="formLabels"/></VBox>
+							</HBox>
+							<HBox width="35%">
+								<Select width="300px" class="formSelect">
+									<items>
+										<core:Item key="0" text=""/>
+										<core:Item key="1" text="1"/>
+										<core:Item key="2" text="2"/>
+										<core:Item key="3" text="3"/>
+										<core:Item key="3" text="4+"/>
+									</items>
+								</Select>
+							</HBox>
+						</HBox>
+						<HBox width="100%" class="sapUiTinyMarginTop">
+							<HBox width="65%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Label text="Number of People" class="formLabels"/></VBox>
+							</HBox>
+							<HBox width="35%">
+								<Select width="300px" class="formSelect">
+									<items>
+										<core:Item key="0" text=""/>
+										<core:Item key="1" text="1"/>
+										<core:Item key="2" text="2"/>
+										<core:Item key="3" text="3"/>
+										<core:Item key="3" text="4"/>
+										<core:Item key="3" text="5+"/>
+									</items>
+								</Select>
+							</HBox>
+						</HBox>
+						<HBox width="100%" class="sapUiTinyMarginTop">
+							<HBox width="65%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Label text="Electricity usage Type" class="formLabels"/></VBox>
+							</HBox>
+							<HBox width="35%">
+								<Select width="300px" class="formSelect">
+									<items>
+										<core:Item key="0" text=""/>
+										<core:Item key="1" text="Infrequent (e.g. second home)"/>
+										<core:Item key="2" text="Evening and Weekends (e.g. working couple)"/>
+										<core:Item key="3" text="All day (e.g. family home)"/>
+										<core:Item key="3" text="Don't know"/>
+									</items>
+								</Select>
+							</HBox>
+						</HBox>
+						<HBox width="100%" class="sapUiTinyMarginTop">
+							<HBox width="65%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Label text="Room Heating" class="formLabels"/></VBox>
+							</HBox>
+							<HBox width="35%">
+								<Select width="300px" class="formSelect">
+									<items>
+										<core:Item key="0" text=""/>
+										<core:Item key="1" text="Electric Plug-In / Wall Heaters"/>
+										<core:Item key="2" text="Electric Storage Heater"/>
+										<core:Item key="3" text="Electric Underfloor Heating"/>
+										<core:Item key="3" text="Gas Central Heating"/>
+										<core:Item key="3" text="Gas Room Heating"/>
+										<core:Item key="3" text="Oil / Other"/>
+										<core:Item key="3" text="Don't know"/>
+									</items>
+								</Select>
+							</HBox>
+						</HBox>
+						<HBox width="100%" class="sapUiTinyMarginTop">
+							<HBox width="65%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Label text="Appliance" class="formLabels"/></VBox>
+							</HBox>
+							<HBox width="35%">
+								<Select width="300px" class="formSelect">
+									<items>
+										<core:Item key="0" text=""/>
+										<core:Item key="1" text="Television, Washer, Dryer, 2 Room Heaters"/>
+										<core:Item key="2" text="Washer, 3 Room Heaters"/>
+										<core:Item key="3" text="Television, Washer, Dryer, 5 Lamps"/>
+									</items>
+								</Select>
+							</HBox>
+						</HBox>
+						<HBox width="100%" class="sapUiTinyMarginTop">
+							<HBox width="65%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Label text="Hours of use per day" class="formLabels"/></VBox>
+							</HBox>
+							<HBox width="35%">
+								<Input type="Number" width="300px"/>
+							</HBox>
+						</HBox>
+					</VBox>
+					<VBox alignItems="Center" width="35%">
+						<VBox class="consumtionRateBox">
+							<HBox class="sapUiSmallMarginBegin sapUiTinyMarginTop">
+								<Text text="Utility Rate" class="consumtionRateBoxLine1"/>
+								<core:Icon
+									src="sap-icon://lead"
+									class="consumtionRateBoxIcon sapUiTinyMarginBegin"
+									color="#FFFFFF" >
+									<core:layoutData>
+										<FlexItemData growFactor="1" />
+									</core:layoutData>
+								</core:Icon>
+							</HBox>
+							<HBox class="sapUiSmallMarginBegin sapUiTinyMarginTop">
+								<Text text="US Average $0.12/kWh" class="consumtionRateBoxLine2"/>
+							</HBox>
+						</VBox>
+					</VBox>
+				</HBox>
+				<HBox class="sapUiMediumMarginTop">
+					<Button 
+						id="btnCalculate"
+						text="Calculate"
+						width="10em"
+						class="sapUiMediumMarginEnd"
+						press="onPressCalculate"></Button>
+					<Button 
+						id="btnReset"
+						text="Reset"
+						width="10em"
+						press="onPressReset"></Button>
+				</HBox>
+				
+				<HBox id="hboxCalculatedValues" width="50%" visible="false" class="consumptionBox sapUiMediumMarginTop sapUiMediumMarginBottom">
+					<VBox width="100%" alignItems="Center" class="sapUiSmallMarginBottom">
+						<HBox width="100%" class="sapUiSmallMarginTop">
+							<HBox width="50%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Text text="Energy consumed per day" class="consumptionBoxLabel"/></VBox>
+							</HBox>
+							<HBox width="50%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<Text text="20 kWh/day" class="consumptionBoxLabel consumptionBoxValue"/>
+							</HBox>
+						</HBox>
+						<HBox width="100%" class="sapUiSmallMarginTop">
+							<HBox width="50%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Text text="Energy consumed per day" class="consumptionBoxLabel"/></VBox>
+							</HBox>
+							<HBox width="50%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<Text text="600 kWh/month" class="consumptionBoxLabel consumptionBoxValue"/>
+							</HBox>
+						</HBox>
+						<HBox width="100%" class="sapUiSmallMarginTop">
+							<HBox width="50%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Text text="Energy consumed per day" class="consumptionBoxLabel"/></VBox>
+							</HBox>
+							<HBox width="50%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<Text text="7200 kWh/year" class="consumptionBoxLabel consumptionBoxValue"/>
+							</HBox>
+						</HBox>
+					</VBox>
+				</HBox>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>

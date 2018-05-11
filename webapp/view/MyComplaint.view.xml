@@ -1,0 +1,153 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.hcl.AgentDashboard.controller.MyComplaint"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page showHeader="false">
+		<content>
+			<Bar class="customBar">
+				<contentLeft>
+					<Button icon="sap-icon://navigation-left-arrow" tooltip="Back" press="onPressBack"/>
+					<Image
+						src="image/EngageLogo.png"
+						densityAware="false"
+						width="154px"
+						height="48px">
+						<layoutData>
+							<FlexItemData growFactor="1" />
+						</layoutData>
+					</Image>
+				</contentLeft>
+				<contentMiddle>
+					<Text text="AGENT WORKBENCH" class="barTitle"/>
+				</contentMiddle>
+				<contentRight>
+					<HBox>
+						<core:Icon
+							src="sap-icon://bell"
+							class="iconSize bellImage sapUiTinyMarginEnd"
+							color="#000000" >
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+						<ImageContent
+							src="image/ProfileImage.png"
+							description="Profile image"
+							class="profileImageContent sapUiTinyMarginBegin sapUiTinyMarginEnd"
+							press="pressProfileImage">
+						</ImageContent>
+						<Text text="Allen Oslon" width="100px" class="sapUiTinyMarginBegin sapUiTinyMarginEnd"/>
+						<core:Icon
+							id="iconUserMenu"
+							src="sap-icon://navigation-down-arrow"
+							class="sapUiTinyMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd"
+							color="#000000"
+							press="onPressUserMenu">
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+					</HBox>
+				</contentRight>
+			</Bar>
+			<VBox alignItems="Center" width="100%">
+				<HBox width="100%" class="sapUiSmallMarginTop">
+					<VBox width="65%">
+						<HBox width="100%">
+							<HBox width="65%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Label text="Ticket" class="formLabels"/></VBox>
+							</HBox>
+							<HBox width="35%">
+								<Select width="300px" class="formSelect">
+									<items>
+										<core:Item key="0" text=""/>
+										<core:Item key="1" text="Service Request"/>
+									</items>
+								</Select>
+							</HBox>
+						</HBox>
+						<HBox width="100%" class="sapUiTinyMarginTop">
+							<HBox width="65%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Label text="Customer ID" class="formLabels"/></VBox>
+							</HBox>
+							<HBox width="35%">
+								<Input id="txtCustomerID" type="Text" width="300px" class="formInput" liveChange="onLiveChangeCustomerName"/>
+							</HBox>
+						</HBox>
+						<HBox width="100%" class="sapUiTinyMarginTop">
+							<HBox width="65%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Label text="Customer Name" class="formLabels"/></VBox>
+							</HBox>
+							<HBox width="35%">
+								<Input id="txtCustomerName" type="Text" width="300px" class="formInput"/>
+							</HBox>
+						</HBox>
+						<HBox width="100%" class="sapUiTinyMarginTop">
+							<HBox width="65%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Label text="Incident Category" class="formLabels"/></VBox>
+							</HBox>
+							<HBox width="35%">
+								<Select width="300px" class="formSelect">
+									<items>
+										<core:Item key="0" text=""/>
+										<core:Item key="1" text="Bill and Payment"/>
+									</items>
+								</Select>
+							</HBox>
+						</HBox>
+						<HBox width="100%" class="sapUiTinyMarginTop">
+							<HBox width="65%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Label text="Priority" class="formLabels"/></VBox>
+							</HBox>
+							<HBox width="35%">
+								<Select width="300px" class="formSelect">
+									<items>
+										<core:Item key="0" text=""/>
+										<core:Item key="1" text="Low"/>
+										<core:Item key="2" text="Medium"/>
+										<core:Item key="3" text="High"/>
+									</items>
+								</Select>
+							</HBox>
+						</HBox>
+						<HBox width="100%" class="sapUiTinyMarginTop">
+							<HBox width="65%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Label text="Agent" class="formLabels"/></VBox>
+							</HBox>
+							<HBox width="35%">
+								<Input type="Text" width="300px" value="Allen Oslon" class="formInput"/>
+							</HBox>
+						</HBox>
+						<HBox width="100%" class="sapUiTinyMarginTop">
+							<HBox width="65%" alignItems="Center" class="sapUiSmallMarginEnd">
+								<VBox alignItems="End" width="100%"><Label text="Comment" class="formLabels"/></VBox>
+							</HBox>
+							<HBox width="35%">
+								<TextArea id="txtAreaComment" rows="5" width="300px"/>
+							</HBox>
+						</HBox>
+						<HBox width="100%" class="sapUiTinyMarginTop">
+							<HBox width="65%" alignItems="Center" class="sapUiSmallMarginEnd"/>
+							<HBox width="35%">
+								<VBox alignItems="Center" width="100%">
+									<HBox>
+										<Button 
+											id="btnSubmit"
+											text="Submit"
+											width="10em"
+											class="sapUiSmallMarginTop sapUiTinyMarginEnd"
+											press="onPressSubmit"/>
+										<Button 
+											id="btnReset"
+											text="Reset"
+											width="10em"
+											class="sapUiSmallMarginTop"
+											press="onPressReset"/>
+									</HBox>
+								</VBox>
+							</HBox>
+						</HBox>
+					</VBox>
+				</HBox>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>

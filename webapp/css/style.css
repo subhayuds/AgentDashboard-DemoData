@@ -1,0 +1,61 @@
+/* Enter your custom styles here */
+.profileImageContent {
+	width: 5rem;
+	height: 3rem;
+}
+
+.profileImage {
+	height: 45px;
+}
+
+.bellImage {
+	margin-top: 10px;
+}
+
+.iconTabBarHeader {
+	box-shadow: inset 0 -0.25rem 0 -0.125rem #E8E8E8 !important;
+    background-color: white !important;
+    border-bottom: 0px !important;
+}
+
+.iconTabBarHeaderMargin {
+	margin: 0px;
+}
+
+.iconTabBarWidth {
+	width: 1210px;
+}
+
+.fontBold {
+	font-weight: bold;
+}
+
+.faqQuestion {
+	font-family: calibri light;
+	font-size: 20px;
+	color: white;
+}
+
+.faqAnswers {
+	font-family: calibri light;
+	font-size: 14px;
+	color: white;
+}
+
+
+
+.sapMInputDivWrapper {
+	height: 1.75rem;
+}
+
+.sapMInputBase {
+	height: auto;
+}
+
+.sapMSlt>.sapMSltLabel {
+	line-height: 1.75rem;
+}
+
+.sapMSlt {
+	height: 1.75rem;
+}

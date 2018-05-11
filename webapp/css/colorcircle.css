@@ -1,0 +1,130 @@
+.circle-text {
+    width:50%;
+}
+.circle-text:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+   	background: #CCCCCC;  
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+.circle-text div {
+    float:left;
+    width:100%;
+    padding-top:50%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    font-weight:bold;
+    color:white;
+    font-size: 150%;
+}
+
+.circlered-text {
+    width:50%;
+}
+.circlered-text:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+   	background: #FF0000;  
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+.circlered-text div {
+    float:left;
+    width:100%;
+    padding-top:50%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    font-weight:bold;
+    color:white;
+    font-size: 150%;
+}
+
+.circlegreen-text {
+    width:50%;
+}
+.circlegreen-text:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+   	background: transparent;  
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+    border: 1.5px solid #27C092;
+}
+.circlegreen-text div {
+    float:left;
+    width:100%;
+    padding-top:50%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    font-weight:bold;
+    color:white;
+    font-size: 120%;
+}
+
+.circleyellow-text {
+    width:50%;
+}
+.circleyellow-text:after {
+	content: "";
+    display: block;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+   	background: #FFD700;  
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+.circleyellow-text div {
+    float:left;
+    width:100%;
+    padding-top:50%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    font-weight:bold;
+    color:white;
+    font-size: 150%;
+}
+
+.circleSelected-text {
+    width:50%;
+}
+.circleSelected-text:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+   	background: #008BC7;  
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+.circleSelected-text div {
+    float:left;
+    width:100%;
+    padding-top:50%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    font-weight:bold;
+    color:white;
+    font-size: 150%;
+}

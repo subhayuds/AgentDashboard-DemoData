@@ -1,0 +1,165 @@
+/* Enter your custom styles here */
+.customBar {
+	background-color: white;
+}
+
+.barTitle {
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.iconSize {
+	font-size : 2rem;
+}
+
+.customSearchBox {
+	background: transparent !important;
+	border: none;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.customFontColor {
+	color: #bfbfbf;
+}
+
+.dashboardTileBackgroundColor {
+	background-color: white;
+}
+
+.scoreText {
+	margin-left: 500px;
+	color: white;
+}
+
+.dashboardBoxes {
+	height: 200px;
+	width: 200px;
+	border-radius: 10px;
+}
+
+.dashboardBottomButtons {
+	background-color: #898989;
+	height: 5em;
+	width: 5em;
+	border-radius: 70px;
+	border: none;
+}
+
+.dashboardBottomButtonIcons {
+	font-size: 2.5rem;
+	line-height: 0rem;
+	width: 0rem;
+	margin-top: 35px;
+	margin-left: -35px;
+	color: #FFFFFF;
+}
+
+.dashboardBottomCircles {
+	background-color: #FF850C;
+	border-radius: 50px;
+	border: none;
+}
+
+.dashboardBottomButtonText {
+	color: white;
+	font-size: 12px;
+}
+
+.dashboardTileHeaderText {
+	color: black;
+	font-family: calibri light;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+/**** Area Proficienct START ***/
+.noOfIncidentsText {
+	color: black;
+	font-size: 24px;
+}
+
+.normalText {
+	color: black;
+	font-size: 11px;
+}
+
+.customProgressbar {
+	min-height: 5px;
+	min-width: 50px;
+	margin: 3px 0px 0px 0px;
+}
+
+.billingIssueProgressBarColor {
+	background: #00A6E2;
+}
+
+.financeIssueProgressBarColor {
+	background: #7E5ECD;
+}
+
+.productProposalProgressBarColor {
+	background: #27C092;
+}
+/**** Area Proficienct END ***/
+
+/**** News Tile Style START ****/
+.newsLinkText {
+	font-family: calibri light;
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: -7px;
+}
+/**** News Tile Style END ****/
+
+/**** knowlege Hub Tile Style START ****/
+.knowledgeHubSearchBarForm {
+	background: #F3F3F3;
+	border: 1px solid #D6D6D6;
+}
+
+.knowledgeHubSearchBarInput {
+	border: none;
+	color: black;
+}
+
+.knowledgeHubSearchBar {
+	height: 1.5rem;
+	line-height: 1.5rem;
+	color: black;
+}
+
+.knowledgeHubListText {
+	font-size: 12px;
+}
+
+#__field1 {
+	height: 1.6rem;
+}
+
+.customList {
+	height: 1.8rem;
+	background: transparent !important;
+	padding: 0px;
+}
+/**** knowlege Hub Tile Style END ****/
+
+/***** Standard Style Class Modification *****/
+.sapMShellGlobalOuterBackground {
+    background-color: black !important;
+}
+
+.sapMSFF:hover {
+	border-color: #bfbfbf !important;
+}
+
+.sapMFocus>.sapMSFF>.sapMSFB {
+	color: black !important;
+}
+
+.sapMSLITitleOnly {
+	color: black;
+	font-size: 12px;
+}
+/**** Generic Styles START ****/
+
+/**** Generic Styles END ****/

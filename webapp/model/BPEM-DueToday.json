@@ -1,0 +1,13 @@
+{
+	"items": [
+		{
+			"caseCategory": "WM02",
+			"caseID": "87XX3",
+			"priority": "Low",
+			"description": "Metre replacement",
+			"objectType": "Work Order",
+			"key": "876213",
+			"notes": ""
+		}
+	]
+}

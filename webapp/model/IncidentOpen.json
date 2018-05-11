@@ -1,0 +1,64 @@
+{
+	"incidents": [
+		{
+			"incidentNo": "190345678",
+			"description": "Incorrect Bill - Month-Apr.2018",
+			"status": "Open",
+			"priority": "Medium",
+			"targetDate": "31-MAY-2018",
+			"creationDate": "02-MAY-2018",
+			"serviceCategory": "Billing Processing",
+			"incidentCategory": "Bill",
+			"causeCategory": "Data",
+			"lastAgentInteraction": "Jac Mcgrath",
+			"resolution": "",
+			"custometName": "Michael Romero",
+			"premise": "6300752"
+		},
+		{
+			"incidentNo": "",
+			"description": "",
+			"status": "",
+			"priority": "",
+			"targetDate": "",
+			"creationDate": "",
+			"serviceCategory": "",
+			"incidentCategory": "",
+			"causeCategory": "",
+			"lastAgentInteraction": "",
+			"resolution": "",
+			"custometName": "",
+			"premise": ""
+		},
+		{
+			"incidentNo": "",
+			"description": "",
+			"status": "",
+			"priority": "",
+			"targetDate": "",
+			"creationDate": "",
+			"serviceCategory": "",
+			"incidentCategory": "",
+			"causeCategory": "",
+			"lastAgentInteraction": "",
+			"resolution": "",
+			"custometName": "",
+			"premise": ""
+		},
+		{
+			"incidentNo": "",
+			"description": "",
+			"status": "",
+			"priority": "",
+			"targetDate": "",
+			"creationDate": "",
+			"serviceCategory": "",
+			"incidentCategory": "",
+			"causeCategory": "",
+			"lastAgentInteraction": "",
+			"resolution": "",
+			"custometName": "",
+			"premise": ""
+		}
+	]
+}

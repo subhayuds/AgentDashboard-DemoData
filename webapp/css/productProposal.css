@@ -1,0 +1,117 @@
+.productProposalInput {
+	background-color: transparent;
+}
+
+.ppContinueButton {
+	background-color: #FF850C;
+	border: 0px;
+	border-radius: 5px;
+	color: white;
+}
+
+.ppMessageText {
+	color: white;
+	font-size: 14px;
+}
+
+.ppMessageTextBold {
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.ppHeaderText {
+	font-family: calibri light;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.ppAreaBackground {
+	background-color: white;
+}
+
+.ppTabBarHeader {
+	box-shadow: none;
+    background-color: white;
+    border-bottom: 0.125rem solid #f0f0f0;
+}
+
+.ppTabBarHeaderMargin {
+	margin: 0px;
+}
+
+.fontWhite {
+	color: white;
+}
+
+.fontBlack {
+	color: black;
+}
+
+.ppCurrentPlanTiles {
+	background-color: #27C092;
+	border-radius: 5px;
+}
+
+.ppUpcomingPlanTiles {
+	background-color: #FFFFFF;
+	border: 2px solid #F0F0F0;
+	border-radius: 5px;
+}
+
+.ppTileTextLarge {
+	font-family: calibri light;
+	font-size: 18px;
+}
+
+.ppTileTextExtraLarge {
+	font-family: calibri light;
+	font-size: 40px;
+}
+
+.ppTileTextSmall {
+	font-family: calibri light;
+	font-size: 12px;
+}
+
+.ppUpcomingPlanTileTextLarge {
+	font-family: calibri light;
+	font-size: 18px;
+}
+
+.ppUpcomingPlanTileTextExtraLarge {
+	font-family: calibri light;
+	color: #27C092;
+	font-size: 40px;
+}
+
+.ppUpcomingPlanTileTextSmall {
+	font-family: calibri light;
+	font-size: 12px;
+}
+
+.ppCurrentPlanTileButton {
+	width: 100px;
+    height: 25px;
+    border: 1px solid #ffffff;
+    border-radius: 35px;
+}
+
+.ppUpcomingPlanTileButton {
+	width: 100px;
+    height: 25px;
+    background-color: #27C092;
+    border: 1px solid #ffffff;
+    border-radius: 35px;
+}
+
+
+.sapMITBSelected>.sapMITBContentArrow {
+    border-bottom-color: #FF850C;
+}
+
+.sapMITBTextOnly .sapMITBFilterDefault.sapMITBSelected>.sapMITBText {
+    color: #FF850C;
+    text-shadow: 0 0 0.125rem #ffffff;
+}

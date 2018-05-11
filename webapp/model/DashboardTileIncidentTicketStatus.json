@@ -1,0 +1,15 @@
+{
+	"items": [
+		{
+			"TicketType": "Open",
+			"TicketCount": 10
+		}, {
+			"TicketType": "WIP",
+			"TicketCount": 4
+		},
+		{
+			"TicketType": "Breach",
+			"TicketCount": 1
+		}
+	]
+}

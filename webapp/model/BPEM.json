@@ -1,0 +1,31 @@
+{
+	"items": [
+		{
+			"caseCategory": "CS01",
+			"caseID": "60XXX1",
+			"priority": "High",
+			"description": "Mailling address",
+			"objectType": "BP",
+			"key": "120001",
+			"notes": ""
+		},
+		{
+			"caseCategory": "BI03",
+			"caseID": "60XXX2",
+			"priority": "V. High",
+			"description": "High Bill",
+			"objectType": "Contract",
+			"key": "350001",
+			"notes": "Last two month high bill"
+		},
+		{
+			"caseCategory": "FI05",
+			"caseID": "60XXX3",
+			"priority": "Average",
+			"description": "Payment related",
+			"objectType": "Contract Account",
+			"key": "1200001",
+			"notes": ""
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+	"items": [
+		{
+			"Followup": "Current",
+			"Count": 20
+		}, {
+			"Followup": "Next",
+			"Count": 6
+		},
+		{
+			"Followup": "Last",
+			"Count": 2
+		}
+	]
+}

@@ -1,0 +1,60 @@
+/* Enter your custom styles here */
+.loginPageHeaderLine1 {
+	margin-top: 5%;
+}
+
+.loginPageHeaderTextLine1 {
+	font-family: calibri light;
+	font-size: 40px;
+	color: white;
+}
+
+.loginPageHeaderLine2 {
+	margin-top: 7%;
+}
+
+.loginPageHeaderTextLine2 {
+	font-family: calibri light;
+	font-size: 30px;
+	color: white;
+}
+
+.customInputBox {
+	background: transparent !important;
+	color: white;
+	border: 0px;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.customButton {
+	background-color: #FF850C;
+	border: 0px;
+	border-radius: 30px;
+	color: white;
+}
+
+.customLink {
+	color: white;
+	font-size: 12px;
+}
+
+.loginInputColor {
+	background: transparent;
+	color: white;
+}
+
+#__xmlview1--txtUsername :hover {
+	background: transparent;
+	color: white;
+}
+
+#__xmlview1--txtPassword :hover {
+	background: transparent;
+	color: white;
+}
+
+.sapMBtn:hover>.sapMBtnHoverable {
+    background-image: none;
+    background-color: #FF850C;
+    border-color: #FF850C;
+}

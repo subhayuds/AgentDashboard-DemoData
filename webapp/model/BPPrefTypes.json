@@ -1,0 +1,12 @@
+{
+	"items": [
+		{
+			"key": "1",
+			"value": "Bill and Payment Notification"
+		},
+		{
+			"key": "2",
+			"value": "Outage Notification"
+		}
+	]
+}

@@ -1,0 +1,28 @@
+{
+	"rating": [
+		{
+			"Week": "Week 1",
+			"June": 5,
+			"July": 3,
+			"August": 4
+		},
+		{
+			"Week": "Week 2",
+			"June": 3,
+			"July": 2,
+			"August": 4
+		},
+		{
+			"Week": "Week 3",
+			"June": 2,
+			"July": 4,
+			"August": 3
+		},
+		{
+			"Week": "Week 4",
+			"June": 1,
+			"July": 3,
+			"August": 4
+		}
+	]
+}

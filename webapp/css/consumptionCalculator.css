@@ -1,0 +1,72 @@
+.consumptionPageHeaderTextLine {
+	margin-top: 10%;
+	font-family: calibri light;
+	font-size: 20px;
+	color: white;
+}
+
+.formLabels {
+	font-family: calibri light;
+	font-size: 20px;
+	color: white;
+}
+
+.formInput {
+	/*height: 1.75rem;*/
+}
+
+.formSelect {
+	height: 1.75rem;
+}
+
+.consumtionRateBox {
+	width: 200px;
+    height: 75px;
+    background-color: #27C092;
+    border-radius: 10px;
+}
+
+.consumtionRateBoxLine1 {
+	font-family: calibri light;
+	color: white;
+	font-size: 18px;
+}
+
+.consumtionRateBoxIcon {
+	font-size: 18px;
+}
+
+.consumtionRateBoxLine2 {
+	font-family: calibri light;
+	font-weight: bold;
+	color: white;
+	font-size: 18px;
+}
+
+.customButton {
+	background-color: #FF850C;
+	border: 0px;
+	border-radius: 30px;
+	color: white;
+}
+
+.consumptionBox {
+	background-color: white;
+	border-radius: 10px;
+}
+
+.consumptionBoxLabel {
+	color: black;
+	font-size:18px;
+}
+
+.consumptionBoxValue {
+	border-bottom: 1px solid black;
+	width: 200px;
+	text-align: right;
+}
+
+/**** Standard CSS ****/
+.sapMSltArrow {
+	line-height: 1.75rem;
+}

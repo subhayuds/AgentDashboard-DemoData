@@ -1,0 +1,335 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:t="sap.ui.table"
+	controllerName="com.hcl.AgentDashboard.controller.BusinessPartner" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page showHeader="false">
+		<content>
+			<Bar class="customBar">
+				<contentLeft>
+					<Button icon="sap-icon://navigation-left-arrow" tooltip="Back" press="onPressBack"/>
+					<Image
+						src="image/EngageLogo.png"
+						densityAware="false"
+						width="154px"
+						height="48px">
+						<layoutData>
+							<FlexItemData growFactor="1" />
+						</layoutData>
+					</Image>
+				</contentLeft>
+				<contentMiddle>
+					<Text text="AGENT WORKBENCH" class="barTitle"/>
+				</contentMiddle>
+				<contentRight>
+					<HBox>
+						<core:Icon
+							src="sap-icon://bell"
+							class="iconSize bellImage sapUiTinyMarginEnd"
+							color="#000000" >
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+						<ImageContent
+							src="image/ProfileImage.png"
+							description="Profile image"
+							class="profileImageContent sapUiTinyMarginBegin sapUiTinyMarginEnd"
+							press="pressProfileImage">
+						</ImageContent>
+						<Text text="Allen Oslon" width="100px" class="sapUiTinyMarginBegin sapUiTinyMarginEnd"/>
+						<core:Icon
+							id="iconUserMenu"
+							src="sap-icon://navigation-down-arrow"
+							class="sapUiTinyMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd"
+							color="#000000"
+							press="onPressUserMenu">
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+					</HBox>
+				</contentRight>
+			</Bar>
+			<VBox alignItems="Center">
+				<HBox width="100%" class="sapUiLargeMarginBegin">
+					<SearchField id="searchFieldBP" placeholder="Search for Business Partner No." width="275%"/>
+				</HBox>
+				<HBox width="100%" class="sapUiLargeMarginBegin sapUiSmallMarginTop">
+					<VBox width="55%">
+						<HBox alignItems="Center" class="bpMessageBoxes">
+							<core:Icon src="sap-icon://warning2" color="#ECA565" class="sapUiTinyMarginBegin sapUiTinyMarginEnd"/>
+							<Text text="There is an implausible read on this account" class="bpMessageBoxesText"/>
+						</HBox>
+						<HBox alignItems="Center" class="bpMessageBoxes">
+							<core:Icon src="sap-icon://warning2" color="#ECA565" class="sapUiTinyMarginBegin sapUiTinyMarginEnd"/>
+							<Text text="Usage has increased. It's 3 times as much as the same period last year." class="bpMessageBoxesText"/>
+						</HBox>
+						<HBox width="100%" class="sapUiSmallMarginTop">
+							<VBox width="30%" height="200px" alignItems="Center" class="bpBusinessCardLeft">
+								<core:Icon
+									src="sap-icon://customer"
+									class="bpBusinessCardLeftIcon sapUiTinyMarginTop sapUiTinyMarginEnd"
+									color="#FFFFFF" >
+								</core:Icon>
+								<Text text="Riyana Sonna Conner" class="bpBusinessCardLeftTextName sapUiTinyMarginTop"/>
+								<Text text="BP ID – 2300013" class="bpBusinessCardLeftTextAddress"/>
+								<Text text="15 St Margarets Lane," class="bpBusinessCardLeftTextAddress sapUiLargeMarginTop"/>
+								<Text text="New York, NY 10033" class="bpBusinessCardLeftTextAddress sapUiTinyMarginTop"/>
+							</VBox>
+							<VBox width="70%" height="200px" alignItems="Start" class="bpBusinessCardRight">
+								<Text text="PnL: PREMIER ENERGY" class="sapUiSmallMarginBegin sapUiSmallMarginTop"/>
+								<Text text="Contact: 01795123456" class="sapUiSmallMarginBegin sapUiTinyMarginTop"/>
+								<Text text="Move in: 13 Jul 2015" class="sapUiSmallMarginBegin sapUiTinyMarginTop"/>
+								<Text text="Move Out: Active" class="sapUiSmallMarginBegin sapUiTinyMarginTop"/>
+								<VBox alignItems="End" width="100%" class="sapUiMediumMarginTop">
+									<HBox alignItems="Center" class="sapUiMediumMarginEnd">
+										<Image
+											src="image/Electricity.png"
+											densityAware="false"
+											width="30px"
+											height="30px"
+											class="sapUiTinyMarginEnd">
+										</Image>
+										<!--<Image-->
+										<!--	src="image/Gas.png"-->
+										<!--	densityAware="false"-->
+										<!--	width="30px"-->
+										<!--	height="30px"-->
+										<!--	class="sapUiSmallMarginEnd">-->
+										<!--</Image>-->
+										<Text text="Contract Account – 30001028"/>
+									</HBox>
+								</VBox>
+							</VBox>
+						</HBox>
+					</VBox>
+					<VBox width="45%" alignItems="Center">
+						<VBox width="90%" height="275px" class="bpBusinessCardRight sapUiSmallMarginEnd">
+							<ScrollContainer height="90%" width="100%" horizontal="false" vertical="true" focusable="true">
+								<List id="listBP" items="{path: '/items'}" class="sapUiTinyMarginTop">
+									<CustomListItem>
+										<HBox alignItems="Center" width="100%">
+											<HBox width="25%">
+												<Image
+													src="{image}"
+													densityAware="false"
+													width="20px"
+													height="20px"
+													class="sapUiSmallMarginBegin sapUiSmallMarginEnd">
+												</Image>
+											</HBox>
+											<HBox width="50%">
+												<Text text="{name}" class="sapUiSmallMarginBegin sapUiSmallMarginEnd"/>
+											</HBox>
+											<HBox width="25%">
+												<Text text="{value}" class="sapUiSmallMarginBegin sapUiSmallMarginEnd"/>
+											</HBox>
+										</HBox>
+									</CustomListItem>
+								</List>
+							</ScrollContainer>
+							<Button 
+								id="btnSummary"
+								text="Summary"
+								width="7em"
+								press="onPressSummary"></Button>
+						</VBox>
+					</VBox>
+				</HBox>
+				<HBox width="97.5%" class="bpBoxBottom sapUiSmallMarginBegin sapUiSmallMarginTop">
+					<IconTabBar
+						id="idIconTabBarBusinessPartner"
+						expanded="{device>/isNoPhone}"
+						class="sapUiResponsiveContentPadding"
+						select="onSelectTab">
+						<items>
+							<IconTabFilter id="iconTabFilterPrefOverview" text="Preference Overview">
+								<VBox alignItems="End" width="100%">
+									<Button 
+										id="btnAddPreference"
+										text="+ Add Preference"
+										width="11em"
+										press="onPressAddPreference"></Button>
+								</VBox>
+								<t:Table
+									id="bpTabPrefOverview"
+									rows="{bpPrefOverviewModel>/items}"
+									selectionMode="MultiToggle"
+									visibleRowCount="2">
+									<t:columns>
+										<t:Column hAlign="Center">
+											<Label text="Preference Type" />
+											<t:template>
+												<Select
+													forceSelection="false"
+													selectedKey="{bpPrefOverviewModel>prefType}"
+													items="{
+														path: 'bpPrefTypesModel>/items'
+													}"
+													enabled="false"
+													width="250px">
+													<core:Item key="{bpPrefTypesModel>key}" text="{bpPrefTypesModel>value}" />
+												</Select>
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center">
+											<Label text="Preference Channel" />
+											<t:template>
+												<Select
+													forceSelection="false"
+													selectedKey="{bpPrefOverviewModel>prefChannel}"
+													items="{
+														path: 'bpPrefChannelsModel>/items'
+													}"
+													enabled="false"
+													width="250px">
+													<core:Item key="{bpPrefChannelsModel>key}" text="{bpPrefChannelsModel>value}" />
+												</Select>
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center">
+											<Label text="Channel Detail" />
+											<t:template>
+												<Input type="Text" value="{bpPrefOverviewModel>prefChannelDetails}" enabled="false" width="250px"/>
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center">
+											<Label text="Actions" />
+											<t:template>
+												<VBox alignItems="Center" width="100%">
+													<HBox>
+														<core:Icon
+															src="sap-icon://edit"
+															class="bpTableIcon sapUiSmallMarginEnd"
+															color="#000000"
+															press="onPressEditPreferenceOverview">
+														</core:Icon>
+														<core:Icon
+															src="sap-icon://save"
+															class="bpTableIcon sapUiSmallMarginEnd"
+															color="#000000"
+															press="onPressSavePreferenceOverview">
+														</core:Icon>
+														<core:Icon
+															src="sap-icon://delete"
+															class="bpTableIcon sapUiSmallMarginBegin"
+															color="#000000">
+														</core:Icon>
+													</HBox>
+												</VBox>
+											</t:template>
+										</t:Column>
+									</t:columns>
+								</t:Table>
+							</IconTabFilter>
+							<IconTabFilter text="Billing Overview">
+								<VBox alignItems="End" width="100%" class="sapUiSmallMarginBottom">
+									<HBox>
+										<Text text="Next Bill Due Date:" class="bpBusinessCardRightTextLabel"/>
+										<Text text="15.06.2018" class="bpBusinessCardRightTextLabel fontBold sapUiTinyMarginEnd"/>
+										<Text text="|" class="bpBusinessCardRightTextLabel"/>
+										<Text text="Balance:" class="bpBusinessCardRightTextLabel sapUiTinyMarginBegin"/>
+										<Text text="$26.05" class="bpBusinessCardRightTextLabel fontBold"/>
+									</HBox>
+								</VBox>
+								<t:Table
+									id="bpTable"
+									rows="{/items}"
+									selectionMode="None"
+									visibleRowCount="3">
+									<t:columns>
+										<t:Column hAlign="Center">
+											<core:Icon
+												src="sap-icon://message-warning"
+												class="bpTableIcon sapUiTinyMarginTop sapUiTinyMarginEnd"
+												color="#000000" >
+												<core:layoutData>
+													<FlexItemData growFactor="1" />
+												</core:layoutData>
+											</core:Icon>
+											<t:template>
+												<core:Icon
+													src="sap-icon://message-warning"
+													class="bpTableIcon sapUiTinyMarginTop sapUiTinyMarginEnd"
+													color="#000000" >
+													<core:layoutData>
+														<FlexItemData growFactor="1" />
+													</core:layoutData>
+												</core:Icon>
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center">
+											<Label text="Fuel" />
+											<t:template>
+												<Image
+													src="{image}"
+													densityAware="false"
+													width="20px"
+													height="20px">
+												</Image>
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center">
+											<Label text="Bill Date" />
+											<t:template>
+												<Label text="{billDate}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center" width="5rem">
+											<Label text="Read" />
+											<t:template>
+												<Label text="{read}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center" width="7rem">
+											<Label text="Read Date" />
+											<t:template>
+												<Label text="{billDate}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center" width="10rem">
+											<Label text="Read Type" />
+											<t:template>
+												<Label text="{readType}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center"  width="7rem">
+											<Label text="Days"/>
+											<t:template>
+												<Label text="{days}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center" width="7rem">
+											<Label text="kWh" />
+											<t:template>
+												<Label text="{kWh}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center">
+											<Label text="Amount" />
+											<t:template>
+												<Label text="{amount}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center">
+											<Label text="Balance" />
+											<t:template>
+												<Label text="{balance}" />
+											</t:template>
+										</t:Column>
+									</t:columns>
+								</t:Table>
+							</IconTabFilter>
+							<IconTabFilter
+								text="Payment Options Overview">
+								<Text text="Attachments go here ..." />
+							</IconTabFilter>
+							<IconTabFilter
+								text="Financial Overview">
+								<Text text="Notes go here ..." />
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</HBox>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>

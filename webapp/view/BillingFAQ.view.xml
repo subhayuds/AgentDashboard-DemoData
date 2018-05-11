@@ -1,0 +1,92 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.hcl.AgentDashboard.controller.BillingFAQ"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<Page showHeader="false">
+		<content>
+			<Bar class="customBar">
+				<contentLeft>
+					<Button icon="sap-icon://navigation-left-arrow" tooltip="Back" press="onPressBack"/>
+					<Image
+						src="image/EngageLogo.png"
+						densityAware="false"
+						width="154px"
+						height="48px">
+						<layoutData>
+							<FlexItemData growFactor="1" />
+						</layoutData>
+					</Image>
+				</contentLeft>
+				<contentMiddle>
+					<Text text="AGENT WORKBENCH" class="barTitle"/>
+				</contentMiddle>
+				<contentRight>
+					<HBox>
+						<core:Icon
+							src="sap-icon://bell"
+							class="iconSize bellImage sapUiTinyMarginEnd"
+							color="#000000" >
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+						<ImageContent
+							src="image/ProfileImage.png"
+							description="Profile image"
+							class="profileImageContent sapUiTinyMarginBegin sapUiTinyMarginEnd"
+							press="pressProfileImage">
+						</ImageContent>
+						<Text text="Allen Oslon" width="100px" class="sapUiTinyMarginBegin sapUiTinyMarginEnd"/>
+						<core:Icon
+							id="iconUserMenu"
+							src="sap-icon://navigation-down-arrow"
+							class="sapUiTinyMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd"
+							color="#000000"
+							press="onPressUserMenu">
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+					</HBox>
+				</contentRight>
+			</Bar>
+			<VBox alignItems="Start" width="95%" class="sapUiMediumMarginBegin">
+				<Text text="What is a statement date?" class="sapUiMediumMarginTop faqQuestion fontBold "/>
+				<Text text="The statement dates reflects when the bill is processed and mailed. 
+				It is not an indication of when your last meter reading was taken. 
+				Your bill lists the date up to which transactions are reflected." 
+				class="sapUiTinyMarginTop faqAnswers"/>
+				
+				<Text text="How long is my billing period?" class="sapUiMediumMarginTop faqQuestion fontBold"/>
+				<Text text="The length of the billing period is listed on your bill, by the number of days." 
+				class="sapUiTinyMarginTop faqAnswers"/>
+				
+				<Text text="What are the basic monthly service charges?" class="sapUiMediumMarginTop faqQuestion fontBold"/>
+				<Text text="Basic monthly service charges are billed for each service: electricity, gas, water, and wastewater/sewer.
+				These amounts are based on a 30-day billing period and are pro-rated to the actual billing period. 
+				These charges are used to recover costs associated with utility administration, meter maintenance and other operational costs for each service.
+				You can download the rates schedule to view the current monthly service charge for each service. 
+				To find current rate schedules, look in the footer (bottom) of the website, in the column Current Rates." 
+				class="sapUiTinyMarginTop faqAnswers"/>
+				
+				<Text text="I don’t want to receive a paper bill. Do you have an electronic bill option?" class="sapUiMediumMarginTop faqQuestion fontBold"/>
+				<Text text="You may consider the ePost service, an alternate mail delivery service offered by American post. 
+				There is no charge for this service. To subscribe to ePost, visit their website. 
+				Please have your billing account number and the last eight digits of your bill SEQ-ID number ready." 
+				class="sapUiTinyMarginTop faqAnswers"/>
+				
+				<Text text="How can I view my household consumption of water, gas and electricity?" class="sapUiMediumMarginTop faqQuestion fontBold"/>
+				<Text text="The Utility customer portal allows you to view your household consumption of water, gas and electricity, as well as your transaction and payment history. 
+				Track your electricity consumption by the day or hour, view your usage history, learn how temperature affects your consumption patterns, compare prices and view your billing amounts. 
+				All you need to get started is your account number and the amount of your last payment." 
+				class="sapUiTinyMarginTop faqAnswers"/>
+				
+				<Text text="How are gas bill estimates calculated?" class="sapUiMediumMarginTop faqQuestion fontBold"/>
+				<Text text="We use one year of historical data for the period we need to estimate. 
+				The data is from actual meter reads. It is used to determine an average daily use for a customer. 
+				The average daily use is then multiplied by the number of days in the billing period." 
+				class="sapUiTinyMarginTop faqAnswers"/>
+			</VBox>
+		</content>
+	</Page>
+	</App>
+</mvc:View>

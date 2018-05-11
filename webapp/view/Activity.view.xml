@@ -1,0 +1,129 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:t="sap.ui.table" controllerName="com.hcl.AgentDashboard.controller.Activity"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page showHeader="false">
+		<content>
+			<Bar class="customBar">
+				<contentLeft>
+					<Button icon="sap-icon://navigation-left-arrow" tooltip="Back" press="onPressBack"/>
+					<Image
+						src="image/EngageLogo.png"
+						densityAware="false"
+						width="154px"
+						height="48px">
+						<layoutData>
+							<FlexItemData growFactor="1" />
+						</layoutData>
+					</Image>
+				</contentLeft>
+				<contentMiddle>
+					<Text text="AGENT WORKBENCH" class="barTitle"/>
+				</contentMiddle>
+				<contentRight>
+					<HBox>
+						<core:Icon
+							src="sap-icon://bell"
+							class="iconSize bellImage sapUiTinyMarginEnd"
+							color="#000000" >
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+						<ImageContent
+							src="image/ProfileImage.png"
+							description="Profile image"
+							class="profileImageContent sapUiTinyMarginBegin sapUiTinyMarginEnd"
+							press="pressProfileImage">
+						</ImageContent>
+						<Text text="Allen Oslon" width="100px" class="sapUiTinyMarginBegin sapUiTinyMarginEnd"/>
+						<core:Icon
+							id="iconUserMenu"
+							src="sap-icon://navigation-down-arrow"
+							class="sapUiTinyMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd"
+							color="#000000"
+							press="onPressUserMenu">
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+					</HBox>
+				</contentRight>
+			</Bar>
+			<VBox alignItems="Center" width="93%" class="sapUiLargeMarginBegin sapUiLargeMarginTop">
+				<IconTabBar
+					id="idIconTabBarActivity"
+					expanded="{device>/isNoPhone}"
+					class="sapUiResponsiveContentPadding">
+					<items>
+						<IconTabFilter text="Follow Up Activity">
+							<t:Table
+								id="tabFollowupActivity"
+								rows="{/items}"
+								selectionMode="None"
+								visibleRowCount="10">
+								<t:columns>
+									<t:Column hAlign="Center">
+										<Label text="Customer ID" />
+										<t:template>
+											<Label text="{customerID}" />
+										</t:template>
+									</t:Column>
+									<t:Column hAlign="Center">
+										<Label text="Status" />
+										<t:template>
+											<Label text="{status}" />
+										</t:template>
+									</t:Column>
+									<t:Column hAlign="Center">
+										<Label text="Priority" />
+										<t:template>
+											<Label text="{priority}" />
+										</t:template>
+									</t:Column>
+									<t:Column hAlign="Center">
+										<Label text="Follow Up Type" />
+										<t:template>
+											<Label text="{followupType}" />
+										</t:template>
+									</t:Column>
+									<t:Column hAlign="Center">
+										<Label text="Subject" />
+										<t:template>
+											<Label text="{subject}" />
+										</t:template>
+									</t:Column>
+									<t:Column hAlign="Center">
+										<Label text="Channel"/>
+										<t:template>
+											<Label text="{channel}" />
+										</t:template>
+									</t:Column>
+									<t:Column hAlign="Center">
+										<Label text="Due Date" />
+										<t:template>
+											<Label text="{dueDate}" />
+										</t:template>
+									</t:Column>
+									<t:Column hAlign="Center">
+										<Label text="Last Follow Up" />
+										<t:template>
+											<Label text="{lastFollowup}" />
+										</t:template>
+									</t:Column>
+									<t:Column hAlign="Center">
+										<Label text="Comments" />
+										<t:template>
+											<Label text="{comments}" />
+										</t:template>
+									</t:Column>
+								</t:columns>
+							</t:Table>
+						</IconTabFilter>
+						<IconTabFilter text="New Follow Up Activity">
+							<Text text="New Follow Up Activity go here ..." />
+						</IconTabFilter>
+					</items>
+				</IconTabBar>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>

@@ -1,0 +1,194 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="com.hcl.AgentDashboard.controller.ProductProposal" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page showHeader="false">
+		<content>
+			<Bar class="customBar">
+				<contentLeft>
+					<Button icon="sap-icon://navigation-left-arrow" tooltip="Back" press="onPressBack"/>
+					<Image
+						src="image/EngageLogo.png"
+						densityAware="false"
+						width="154px"
+						height="48px">
+						<layoutData>
+							<FlexItemData growFactor="1" />
+						</layoutData>
+					</Image>
+				</contentLeft>
+				<contentMiddle>
+					<Text text="AGENT WORKBENCH" class="barTitle"/>
+				</contentMiddle>
+				<contentRight>
+					<HBox>
+						<core:Icon
+							src="sap-icon://bell"
+							class="iconSize bellImage sapUiTinyMarginEnd"
+							color="#000000" >
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+						<ImageContent
+							src="image/ProfileImage.png"
+							description="Profile image"
+							class="profileImageContent sapUiTinyMarginBegin sapUiTinyMarginEnd"
+							press="pressProfileImage">
+						</ImageContent>
+						<Text text="Allen Oslon" width="100px" class="sapUiTinyMarginBegin sapUiTinyMarginEnd"/>
+						<core:Icon
+							id="iconUserMenu"
+							src="sap-icon://navigation-down-arrow"
+							class="sapUiTinyMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd"
+							color="#000000"
+							press="onPressUserMenu">
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+					</HBox>
+				</contentRight>
+			</Bar>
+			<VBox alignItems="Center" width="100%">
+				<HBox width="100%">
+					<Input
+						id="inputID"
+						class="sapUiMediumMarginBegin sapUiSmallMarginTop"
+						type="Text"
+						width="400px"
+						value="10022"
+					/>
+					<Button 
+						id="btnContinue"
+						text="Continue"
+						width="7em"
+						class="sapUiSmallMarginBegin sapUiSmallMarginTop"
+						press="onPressContinue">
+					</Button>
+					<VBox alignItems="End" width="100%">
+						<HBox class="sapUiMediumMarginTop sapUiMediumMarginEnd">
+							<Text text="You are viewing plans for" class="ppMessageText"/>
+							<Text text="Con Edition" class="ppMessageTextBold"/>
+							<Text text="area." class="ppMessageText"/>
+							<Link
+								id="linkUpdateLocation"
+								text="Update Location"
+								press="handleUpdateLocation" />
+						</HBox>
+					</VBox>
+				</HBox>
+				<HBox width="100%" class="sapUiSmallMarginTop">
+					<Text text="CURRENT PLANS" class="ppHeaderText sapUiMediumMarginBegin"/>
+				</HBox>
+				<HBox width="95.5%" height="250px" class="ppAreaBackground sapUiTinyMarginTop sapUiMediumMarginBegin sapUiMediumMarginEnd">
+					<IconTabBar
+						id="idIconTabBarCurrentPlans"
+						expanded="{device>/isNoPhone}"
+						class="sapUiResponsiveContentPadding">
+						<items>
+							<IconTabFilter text="Electricity">
+								<VBox alignItems="Center" width="100%">
+									<HBox>
+										<VBox alignItems="Center" width="250px" height="175px" class="ppCurrentPlanTiles">
+											<Text text="Live Brighter 18" class="ppTileTextLarge fontWhite sapUiTinyMarginTop"/>
+											<Text text="Get 18 months of fixed rate electricity for your home" class="ppTileTextSmall fontWhite sapUiSmallMarginBegin sapUiTinyMarginTop sapUiSmallMarginEnd"/>
+											<HBox class="sapUiTinyMarginTop">
+												<Text text="$8.50" class="ppTileTextExtraLarge fontWhite"/>
+												<Text text="/kWh" class="ppTileTextSmall fontWhite sapUiTinyMarginBegin sapUiSmallMarginTop"/>
+											</HBox>
+											<VBox alignItems="Center" class="ppCurrentPlanTileButton sapUiSmallMarginTop">
+												<Text text="Get Details" class="ppTileTextSmall fontWhite"/>
+											</VBox>
+										</VBox>
+										<VBox alignItems="Center" width="250px" height="175px" class="ppCurrentPlanTiles sapUiLargeMarginBegin">
+											<Text text="Live Brighter 12" class="ppTileTextLarge fontWhite sapUiTinyMarginTop"/>
+											<Text text="Enjoy peace of mind because your electricity rate won't change for 12 months" class="ppTileTextSmall fontWhite sapUiSmallMarginBegin sapUiTinyMarginTop sapUiSmallMarginEnd"/>
+											<HBox class="sapUiTinyMarginTop">
+												<Text text="$7.99" class="ppTileTextExtraLarge fontWhite"/>
+												<Text text="/kWh" class="ppTileTextSmall fontWhite sapUiTinyMarginBegin sapUiSmallMarginTop"/>
+											</HBox>
+											<VBox alignItems="Center" class="ppCurrentPlanTileButton sapUiSmallMarginTop">
+												<Text text="Get Details" class="ppTileTextSmall fontWhite"/>
+											</VBox>
+										</VBox>
+									</HBox>
+								</VBox>
+							</IconTabFilter>
+							<IconTabFilter
+								text="Gas">
+								<Text text="Attachments go here ..." />
+							</IconTabFilter>
+							<IconTabFilter text="Home Services">
+								<VBox alignItems="Center" width="100%">
+									<Image
+										src="image/HomeServices.png"
+										height="165px"
+										densityAware="false">
+										<layoutData>
+											<FlexItemData growFactor="1" />
+										</layoutData>
+									</Image>
+								</VBox>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</HBox>
+				<HBox width="100%" class="sapUiSmallMarginTop">
+					<Text text="UPCOMING PLANS" class="ppHeaderText sapUiMediumMarginBegin"/>
+				</HBox>
+				<HBox width="95.5%" height="250px" class="ppAreaBackground sapUiTinyMarginTop sapUiMediumMarginBegin sapUiMediumMarginEnd">
+					<IconTabBar
+						id="idIconTabBarUpcomingPlans"
+						expanded="{device>/isNoPhone}"
+						class="sapUiResponsiveContentPadding">
+						<items>
+							<IconTabFilter text="Electricity">
+								<VBox alignItems="Center" width="100%">
+									<HBox>
+										<VBox alignItems="Center" width="250px" height="175px" class="ppUpcomingPlanTiles">
+											<Text text="Live Brighter 18" class="ppUpcomingPlanTileTextLarge fontBlack sapUiTinyMarginTop"/>
+											<Text text="Get 18 months of fixed rate electricity for your home" class="ppUpcomingPlanTileTextSmall fontBlack sapUiSmallMarginBegin sapUiTinyMarginTop sapUiSmallMarginEnd"/>
+											<HBox class="sapUiTinyMarginTop">
+												<Text text="$8.50" class="ppUpcomingPlanTileTextExtraLarge fontBlack"/>
+												<Text text="/kWh" class="ppUpcomingPlanTileTextSmall fontBlack sapUiTinyMarginBegin sapUiSmallMarginTop"/>
+											</HBox>
+											<VBox alignItems="Center" class="ppUpcomingPlanTileButton sapUiSmallMarginTop">
+												<Text text="Get Details" class="ppUpcomingPlanTileTextSmall fontWhite"/>
+											</VBox>
+										</VBox>
+										<VBox alignItems="Center" width="250px" height="175px" class="ppUpcomingPlanTiles sapUiLargeMarginBegin">
+											<Text text="Live Brighter 12" class="ppUpcomingPlanTileTextLarge fontBlack sapUiTinyMarginTop"/>
+											<Text text="Enjoy peace of mind because your electricity rate won't change for 12 months" class="ppUpcomingPlanTileTextSmall fontBlack sapUiSmallMarginBegin sapUiTinyMarginTop sapUiSmallMarginEnd"/>
+											<HBox class="sapUiTinyMarginTop">
+												<Text text="$7.99" class="ppUpcomingPlanTileTextExtraLarge"/>
+												<Text text="/kWh" class="ppUpcomingPlanTileTextSmall fontBlack sapUiTinyMarginBegin sapUiSmallMarginTop"/>
+											</HBox>
+											<VBox alignItems="Center" class="ppUpcomingPlanTileButton sapUiSmallMarginTop">
+												<Text text="Get Details" class="ppUpcomingPlanTileTextSmall fontWhite"/>
+											</VBox>
+										</VBox>
+									</HBox>
+								</VBox>
+							</IconTabFilter>
+							<IconTabFilter
+								text="Gas">
+								<Text text="Attachments go here ..." />
+							</IconTabFilter>
+							<IconTabFilter text="Home Services">
+								<VBox alignItems="Center" width="100%">
+									<Image
+										src="image/HomeServices.png"
+										height="165px"
+										densityAware="false">
+										<layoutData>
+											<FlexItemData growFactor="1" />
+										</layoutData>
+									</Image>
+								</VBox>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</HBox>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>

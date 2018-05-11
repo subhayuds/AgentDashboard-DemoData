@@ -1,0 +1,74 @@
+.bpCustomSearchBox {
+	background: transparent !important;
+	border: none;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.bpMessageBoxes {
+	width: 100%;
+    background-color: white;
+    height: 30px;
+    border-bottom: 1px solid black;
+}
+
+.bpMessageBoxesText {
+	font-family: calibri light;
+	color: black;
+	font-size: 14px;
+}
+
+.bpBusinessCardLeft {
+	background-color: #27C092;
+}
+
+.bpBusinessCardLeftIcon {
+	font-size: 3rem;
+}
+
+.bpBusinessCardLeftTextName {
+	font-family: calibri light;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.bpBusinessCardLeftTextAddress {
+	color: white;
+	font-size: 14px;
+}
+
+.bpBusinessCardRight {
+	background-color: white;
+}
+
+.bpBusinessCardRightTextLabel {
+	font-family: calibri light;
+	color: black;
+	font-size: 16px;
+}
+
+.bpSummaryButton {
+	background-color: #FF850C;
+	border: 0px;
+	border-radius: 5px;
+	color: white;
+}
+
+.bpButtonLocation {
+	float: right;
+	margin-right: 10px;
+}
+
+.bpBoxBottom {
+	width: 100%;
+    background-color: white;
+    height: 250px;
+}
+
+.iconTabBarSize {
+	width: 100%;
+}
+
+.bpTableIcon {
+	font-size: 1.5rem;
+}

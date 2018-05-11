@@ -1,0 +1,511 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"id": "com.hcl.AgentDashboard",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		},
+		"dataSources": {
+			"customerSatisfactionData": {
+				"type": "JSON",
+				"uri": "model/DashboardTileCustomerSatisfaction.json"
+			},
+			"incidentTicketStatusData": {
+				"type": "JSON",
+				"uri": "model/DashboardTileIncidentTicketStatus.json"
+			},
+			"followupData": {
+				"type": "JSON",
+				"uri": "model/DashboardTileFollowup.json"
+			},
+			"newsData": {
+				"type": "JSON",
+				"uri": "model/DashboardTileNews.json"
+			},
+			"knowledgeHubData": {
+				"type": "JSON",
+				"uri": "model/DashboardTileKnowledgeHub.json"
+			},
+			"bpListData": {
+				"type": "JSON",
+				"uri": "model/BPList.json"
+			},
+			"bpTableData": {
+				"type": "JSON",
+				"uri": "model/BPTable.json"
+			},
+			"bpPrefOverviewData": {
+				"type": "JSON",
+				"uri": "model/BPPrefOverview.json"
+			},
+			"bpPrefTypesData": {
+				"type": "JSON",
+				"uri": "model/BPPrefTypes.json"
+			},
+			"bpPrefChannelsData": {
+				"type": "JSON",
+				"uri": "model/BPPrefChannels.json"
+			},
+			"incidentOpenData": {
+				"type": "JSON",
+				"uri": "model/IncidentOpen.json"
+			},
+			"incidentInProgressData": {
+				"type": "JSON",
+				"uri": "model/IncidentInProgress.json"
+			},
+			"activityData": {
+				"type": "JSON",
+				"uri": "model/Activity.json"
+			},
+			"bpemData": {
+				"type": "JSON",
+				"uri": "model/BPEM.json"
+			},
+			"bpemDueTodayData": {
+				"type": "JSON",
+				"uri": "model/BPEM-DueToday.json"
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "com.hcl.AgentDashboard.view.StartPage",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.hcl.AgentDashboard.i18n.i18n"
+				}
+			},
+			"customerSatisfactionModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "customerSatisfactionData",
+				"preload": true
+			},
+			"incidentTicketStatusModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "incidentTicketStatusData",
+				"preload": true
+			},
+			"followupModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "followupData",
+				"preload": true
+			},
+			"newsModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "newsData",
+				"preload": true
+			},
+			"knowledgeHubModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "knowledgeHubData",
+				"preload": true
+			},
+			"bpListModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "bpListData",
+				"preload": true
+			},
+			"bpTableModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "bpTableData",
+				"preload": true
+			},
+			"bpPrefOverviewModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "bpPrefOverviewData",
+				"preload": true
+			},
+			"bpPrefTypesModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "bpPrefTypesData",
+				"preload": true
+			},
+			"bpPrefChannelsModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "bpPrefChannelsData",
+				"preload": true
+			},
+			"activityModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "activityData",
+				"preload": true
+			},
+			"incidentOpenModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "incidentOpenData",
+				"preload": true
+			},
+			"incidentInProgressModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "incidentInProgressData",
+				"preload": true
+			},
+			"bpemModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "bpemData",
+				"preload": true
+			},
+			"bpemDueTodayModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "bpemDueTodayData",
+				"preload": true
+			}
+		},
+		"resources": {
+			"js": [
+				{
+					"uri": "https://maps.googleapis.com/maps/api/js?key=AIzaSyD7kkQZbqyhrjm6y1pT0ijXf_kg25GvDjU"
+				}
+			],
+			"css": [
+				{
+					"uri": "css/style.css",
+					"id": "globalStyle"
+				},
+				{
+					"uri": "css/loginView.css",
+					"id": "loginView"
+				},
+				{
+					"uri": "css/workbench.css",
+					"id": "workbench"
+				},
+				{
+					"uri": "css/consumptionCalculator.css",
+					"id": "consumptionCalculator"
+				},
+				{
+					"uri": "css/businessPartner.css",
+					"id": "businessPartner"
+				},
+				{
+					"uri": "css/productProposal.css",
+					"id": "productProposal"
+				},
+				{
+					"uri": "css/activity.css",
+					"id": "activity"
+				},
+				{
+					"uri": "css/incident.css",
+					"id": "incident"
+				},
+				{
+					"uri": "css/colorcircle.css",
+					"id": "colorCircle"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "com.hcl.AgentDashboard.view",
+				"controlAggregation": "pages",
+				"controlId": "idAppControl",
+				"clearTarget": "true"
+			},
+			"routes": [
+				{
+					"name": "Login",
+					"pattern": "Login",
+					"target": [
+						"Login"
+					]
+				},
+				{
+					"name": "Workbench",
+					"pattern": "Workbench",
+					"target": [
+						"Workbench"
+					]
+				},
+				{
+					"name": "Consumption",
+					"pattern": "Consumption",
+					"target": [
+						"Consumption"
+					]
+				},
+				{
+					"name": "BusinessPartner",
+					"pattern": "BusinessPartner",
+					"target": [
+						"BusinessPartner"
+					]
+				},
+				{
+					"name": "ProductProposal",
+					"pattern": "ProductProposal",
+					"target": [
+						"ProductProposal"
+					]
+				},
+				{
+					"name": "Activity",
+					"pattern": "Activity",
+					"target": [
+						"Activity"
+					]
+				},
+				{
+					"name": "Incident",
+					"pattern": "Incident",
+					"target": [
+						"Incident"
+					]
+				},
+				{
+					"name": "MyComplaint",
+					"pattern": "MyComplaint",
+					"target": [
+						"MyComplaint"
+					]
+				},
+				{
+					"name": "BPEM",
+					"pattern": "BPEM",
+					"target": [
+						"BPEM"
+					]
+				},
+				{
+					"name": "BillCycle",
+					"pattern": "BillCycle",
+					"target": [
+						"BillCycle"
+					]
+				},
+				{
+					"name": "BillingFAQ",
+					"pattern": "BillingFAQ",
+					"target": [
+						"BillingFAQ"
+					]
+				},
+				{
+					"name": "PaymentFAQ",
+					"pattern": "PaymentFAQ",
+					"target": [
+						"PaymentFAQ"
+					]
+				},
+				{
+					"name": "Technovasion",
+					"pattern": "Technovasion",
+					"target": [
+						"Technovasion"
+					]
+				}
+			],
+			"targets": {
+				"Login": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Login",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "com.hcl.AgentDashboard.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearTarget": "true"
+				},
+				"Workbench": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Workbench",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "com.hcl.AgentDashboard.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearTarget": "true"
+				},
+				"Consumption": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "ConsumptionCalculator",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "com.hcl.AgentDashboard.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearTarget": "true"
+				},
+				"BusinessPartner": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "BusinessPartner",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "com.hcl.AgentDashboard.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearTarget": "true"
+				},
+				"ProductProposal": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "ProductProposal",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "com.hcl.AgentDashboard.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearTarget": "true"
+				},
+				"Activity": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Activity",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "com.hcl.AgentDashboard.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearTarget": "true"
+				},
+				"Incident": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Incident",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "com.hcl.AgentDashboard.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearTarget": "true"
+				},
+				"MyComplaint": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "MyComplaint",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "com.hcl.AgentDashboard.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearTarget": "true"
+				},
+				"BPEM": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "BPEM",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "com.hcl.AgentDashboard.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearTarget": "true"
+				},
+				"BillCycle": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "AboutBillCycle",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "com.hcl.AgentDashboard.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearTarget": "true"
+				},
+				"BillingFAQ": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "BillingFAQ",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "com.hcl.AgentDashboard.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearTarget": "true"
+				},
+				"PaymentFAQ": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "PaymentFAQ",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "com.hcl.AgentDashboard.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearTarget": "true"
+				},
+				"Technovasion": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "NewsTechnovasion2018",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "com.hcl.AgentDashboard.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearTarget": "true"
+				}
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}

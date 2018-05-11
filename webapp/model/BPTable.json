@@ -1,0 +1,37 @@
+{
+	"items": [
+		{
+			"image": "image/Fire.png",
+			"billDate": "04.11.2017",
+			"read": "171119",
+			"readDate": "05.11.2017",
+			"readType": "Automatic Estimation",
+			"days": "10",
+			"kWh": "705.39",
+			"amount": "$31.56",
+			"balance": "$1235.95"
+		},
+		{
+			"image": "image/Fire.png",
+			"billDate": "04.10.2017",
+			"read": "171083",
+			"readDate": "05.10.2017",
+			"readType": "Automatic Estimation",
+			"days": "10",
+			"kWh": "595.88",
+			"amount": "$61.64",
+			"balance": "$382.66"
+		},
+		{
+			"image": "image/Fire.png",
+			"billDate": "04.09.2017",
+			"read": "171683",
+			"readDate": "05.09.2017",
+			"readType": "Automatic Estimation",
+			"days": "10",
+			"kWh": "995.88",
+			"amount": "$335.14",
+			"balance": "$631.79"
+		}
+	]
+}

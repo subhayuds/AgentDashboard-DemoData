@@ -1,0 +1,376 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cc="com.hcl.AgentDashboard.control" xmlns:l="sap.ui.layout" 
+xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data"
+controllerName="com.hcl.AgentDashboard.controller.Workbench" xmlns:mic="sap.suite.ui.microchart" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page showHeader="false">
+		<content>
+			<Bar class="customBar">
+				<contentLeft>
+					<!--<Button icon="sap-icon://navigation-left-arrow" tooltip="Back"/>-->
+					<Image
+						src="image/EngageLogo.png"
+						densityAware="false"
+						width="154px"
+						height="48px">
+						<layoutData>
+							<FlexItemData growFactor="1" />
+						</layoutData>
+					</Image>
+				</contentLeft>
+				<contentMiddle>
+					<Text text="AGENT WORKBENCH" class="barTitle"/>
+				</contentMiddle>
+				<contentRight>
+					<HBox>
+						<core:Icon
+							src="sap-icon://bell"
+							class="iconSize bellImage sapUiTinyMarginEnd"
+							color="#000000" >
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+						<ImageContent
+							src="image/ProfileImage.png"
+							description="Profile image"
+							class="profileImageContent sapUiTinyMarginBegin sapUiTinyMarginEnd"
+							press="pressProfileImage">
+						</ImageContent>
+						<Text text="Allen Oslon" width="100px" class="sapUiTinyMarginBegin sapUiTinyMarginEnd"/>
+						<core:Icon
+							id="iconUserMenu"
+							src="sap-icon://navigation-down-arrow"
+							class="sapUiTinyMarginBegin sapUiTinyMarginTop sapUiTinyMarginEnd"
+							color="#000000"
+							press="onPressUserMenu">
+							<core:layoutData>
+								<FlexItemData growFactor="1" />
+							</core:layoutData>
+						</core:Icon>
+					</HBox>
+				</contentRight>
+			</Bar>
+			<VBox alignItems="Center">
+				<HBox>
+					<SearchField placeholder="Search for Business Partner No." width="275%" search="onPressBPSearch"/>
+					<Text text="Your Score:" class="sapUiSmallMarginTop scoreText"/>
+					<cc:ColorCircle value="87" greenHours="100.00" yellowHours="0.00" size="35px" class="sapUiSmallMarginBegin sapUiTinyMarginTop"/>
+				</HBox>
+				
+				<HBox height="200px" class="sapUiSmallMarginTop">
+					<CustomTile press="onPress">
+                    	<content>
+							<VBox alignItems="Center" class="dashboardBoxes dashboardTileBackgroundColor">
+								<Text text="CUSTOMER SATISFACTION" class="dashboardTileHeaderText"/>
+								<Image
+									src="image/CustomerSatisfaction.png"
+									densityAware="false"
+									width="190px"
+									height="155px">
+									<layoutData>
+										<FlexItemData growFactor="1" />
+									</layoutData>
+								</Image>
+								<Image
+									src="image/Legend-1.png"
+									densityAware="false"
+									width="150px">
+									<layoutData>
+										<FlexItemData growFactor="1" />
+									</layoutData>
+								</Image>
+								<!--<viz:VizFrame id="idVizFrame2" uiConfig="{applicationSet:'fiori'}" height='200px' width="200px" vizType='bullet'>-->
+					   <!--             <viz:dataset>-->
+					   <!--                 <viz.data:FlattenedDataset data="{/rating}">-->
+					   <!--                     <viz.data:dimensions>-->
+					   <!--                         <viz.data:DimensionDefinition name="Week" value="{Week}" />-->
+					   <!--                     </viz.data:dimensions>-->
+					   <!--                     <viz.data:measures>-->
+					   <!--                         <viz.data:MeasureDefinition name="June" value="{June}" />-->
+					   <!--                         <viz.data:MeasureDefinition name="July" value="{July}" />-->
+					   <!--                         <viz.data:MeasureDefinition name="August" value="{August}" />-->
+					   <!--                     </viz.data:measures>-->
+					   <!--                 </viz.data:FlattenedDataset>-->
+					   <!--             </viz:dataset>-->
+					
+					   <!--             <viz:feeds>-->
+					   <!--                 <viz.feeds:FeedItem id="feedActualValues" uid="actualValues" type="Measure" values="June" />-->
+					   <!--                 <viz.feeds:FeedItem id="feedCategoryAxis" uid="categoryAxis" type="Dimension" values="Week" />-->
+					   <!--             </viz:feeds>-->
+					   <!--         </viz:VizFrame>-->
+							</VBox>
+						</content> 
+            		</CustomTile>
+            		
+            		<CustomTile press="onPressIncident" class="sapUiMediumMarginBegin">
+                    	<content>
+							<VBox id="vbTileIncidentTicketStatus" alignItems="Center" class="dashboardBoxes dashboardTileBackgroundColor">
+								<Text id="txtIncidentTileHader" text="INCIDENT TICKET STATUS" class="dashboardTileHeaderText"/>
+								<Image
+									src="image/IncidentStatus.png"
+									densityAware="false"
+									width="160px"
+									height="160px">
+									<layoutData>
+										<FlexItemData growFactor="1" />
+									</layoutData>
+								</Image>
+								<Image
+									src="image/Legend-2.png"
+									densityAware="false"
+									width="190px">
+									<layoutData>
+										<FlexItemData growFactor="1" />
+									</layoutData>
+								</Image>
+					            <!--<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"  height='185px' width="205px" vizType='donut'>-->
+					            <!--    <viz:dataset>-->
+					            <!--        <viz.data:FlattenedDataset data="{/items}">-->
+					            <!--            <viz.data:dimensions>-->
+					            <!--                <viz.data:DimensionDefinition name="Ticket Type" value="{TicketType}" />-->
+					            <!--            </viz.data:dimensions>-->
+					            <!--            <viz.data:measures>-->
+					            <!--                <viz.data:MeasureDefinition name="Ticket Count" value="{TicketCount}" />-->
+					            <!--            </viz.data:measures>-->
+					            <!--        </viz.data:FlattenedDataset>-->
+					            <!--    </viz:dataset>-->
+					
+					            <!--    <viz:feeds>-->
+					            <!--        <viz.feeds:FeedItem uid="size" type="Measure"-->
+					            <!--            values="Ticket Count" />-->
+					            <!--        <viz.feeds:FeedItem uid="color" type="Dimension"-->
+					            <!--            values="Ticket Type" />-->
+					            <!--    </viz:feeds>-->
+					            <!--</viz:VizFrame>-->
+							</VBox>
+						</content> 
+            		</CustomTile>
+            		<CustomTile press="onPressFollowup" class="sapUiMediumMarginBegin">
+                    	<content>
+							<VBox alignItems="Center" class="dashboardBoxes dashboardTileBackgroundColor">
+								<Text text="FOLLOW UP" class="dashboardTileHeaderText"/>
+								<Image
+									src="image/Followup.png"
+									densityAware="false"
+									width="160px"
+									height="160px">
+									<layoutData>
+										<FlexItemData growFactor="1" />
+									</layoutData>
+								</Image>
+								<Image
+									src="image/Legend-3.png"
+									densityAware="false"
+									width="190px">
+									<layoutData>
+										<FlexItemData growFactor="1" />
+									</layoutData>
+								</Image>
+								<!--<viz:VizFrame id="idVizFrameFollowup" uiConfig="{applicationSet:'fiori'}"  height='185px' width="200px" vizType='donut'>-->
+					   <!--             <viz:dataset>-->
+					   <!--                 <viz.data:FlattenedDataset data="{/items}">-->
+					   <!--                     <viz.data:dimensions>-->
+					   <!--                         <viz.data:DimensionDefinition name="Followup" value="{Followup}" />-->
+					   <!--                     </viz.data:dimensions>-->
+					   <!--                     <viz.data:measures>-->
+					   <!--                         <viz.data:MeasureDefinition name="Count" value="{Count}" />-->
+					   <!--                     </viz.data:measures>-->
+					   <!--                 </viz.data:FlattenedDataset>-->
+					   <!--             </viz:dataset>-->
+					
+					   <!--             <viz:feeds>-->
+					   <!--                 <viz.feeds:FeedItem uid="size" type="Measure" values="Count" />-->
+					   <!--                 <viz.feeds:FeedItem uid="color" type="Dimension" values="Followup" />-->
+					   <!--             </viz:feeds>-->
+					   <!--         </viz:VizFrame>-->
+							</VBox>
+						</content> 
+            		</CustomTile>
+            		<CustomTile press="onPress" class="sapUiMediumMarginBegin">
+                    	<content>
+							<VBox alignItems="Center" class="dashboardBoxes dashboardTileBackgroundColor">
+								<Text text="CALL Efficiency" class="dashboardTileHeaderText"/>
+								<Image
+									src="image/CallHandling.png"
+									densityAware="false"
+									width="150px"
+									height="150px"
+									class="sapUiSmallMarginTop">
+									<layoutData>
+										<FlexItemData growFactor="1" />
+									</layoutData>
+								</Image>
+							</VBox>
+						</content> 
+            		</CustomTile>
+				</HBox>
+				<HBox class="sapUiMediumMarginTop" height="200px">
+					<CustomTile press="onPress">
+                    	<content>
+							<VBox alignItems="Center" class="dashboardBoxes dashboardTileBackgroundColor">
+								<Text text="AREA PROFICIENCY" class="dashboardTileHeaderText"/>
+								<HBox alignItems="Center" class="sapUiTinyMarginTop">
+									<Text text="45" class="noOfIncidentsText sapUiTinyMarginEnd"/>
+									<Text text="incidents resolved by you" class="normalText"/>
+								</HBox>
+								
+								<VBox width="90%">
+									<Text text="Billing issue - 23%" class="normalText sapUiSmallMarginTop"/>
+									<ProgressIndicator
+										id="pbBillingIssue"
+										class="sapUiSmallMarginBottom customProgressbar"
+										percentValue="23"
+										showValue="false"
+										state="Error"
+										width="175px"
+										height="7px"/>
+									
+									<Text text="Finance issue - 37%" class="normalText"/>
+									<ProgressIndicator
+										id="pbFinanceIssue"
+										class="sapUiSmallMarginBottom customProgressbar"
+										percentValue="37"
+										showValue="false"
+										state="Success"
+										width="175px"
+										height="7px"/>
+									
+									<Text text="Product proposal - 30%" class="normalText"/>
+									<ProgressIndicator
+										id="pbProductProposal"
+										class="sapUiSmallMarginBottom customProgressbar"
+										percentValue="30"
+										showValue="false"
+										state="Warning"
+										width="175px"
+										height="7px"/>
+								</VBox>
+							</VBox>
+						</content> 
+            		</CustomTile>
+            		<CustomTile press="onPress" class="sapUiMediumMarginBegin">
+                    	<content>
+							<VBox alignItems="Center" class="dashboardBoxes dashboardTileBackgroundColor">
+								<Text text="NEWS" class="dashboardTileHeaderText"/>
+								<List id="listNews" headerText="" items="{newsModel>/results}" width="175px">
+									<CustomListItem>
+										<HBox>
+											<Link
+												text="{newsModel>title}"
+												class="newsLinkText"
+												press="handleNewsTitleClick"/>
+										</HBox>
+									</CustomListItem>
+								</List>
+							</VBox>
+						</content> 
+            		</CustomTile>
+            		<CustomTile press="onPress" class="sapUiMediumMarginBegin">
+                    	<content>
+							<VBox alignItems="Center" class="dashboardBoxes dashboardTileBackgroundColor">
+								<Text text="KNOWLEDGE HUB" class="dashboardTileHeaderText"/>
+								<SearchField width="90%" search="onSearchKnowledgeHub" class="sapUiTinyMarginBegin"/>
+								<Text text="Top Recent Searches" width="180px" class="dashboardTileHeaderText sapUiTinyMarginTop"/>
+								<List id="listKnowledgeHub" items="{knowledgeHubModel>/results}" width="175px" class="sapUiTinyMarginTop">
+									<CustomListItem>
+										<HBox>
+											<Text text="{knowledgeHubModel>key}" width="150px" class="knowledgeHubListText"/>
+											<Image
+												src="image/Export.png"
+												densityAware="false"
+												width="25px"
+												height="25px"
+												press="onPressKnowledgeHubLink">
+												<layoutData>
+													<FlexItemData growFactor="1" />
+												</layoutData>
+											</Image>
+										</HBox>
+									</CustomListItem>
+								</List>
+							</VBox>
+						</content> 
+            		</CustomTile>
+            		<CustomTile press="onPress" class="sapUiMediumMarginBegin">
+                    	<content>
+							<VBox alignItems="Center" class="dashboardBoxes dashboardTileBackgroundColor">
+								<Text text="OUTAGE" class="dashboardTileHeaderText"/>
+								<HBox id="hbMap" width="190px" height="165px" class="sapUiTinyMarginTop"/>
+							</VBox>
+						</content> 
+            		</CustomTile>
+				</HBox>
+	
+				<HBox class="sapUiSmallMarginTop">
+					<VBox alignItems="Center" width="155px">
+						<VBox alignItems="Center" height="60px" width="60px" class="dashboardBottomCircles">
+							<HBox alignItems="Center" height="60px">
+								<Image
+									src="image/BPEMCase.png"
+									densityAware="false"
+									width="40px"
+									height="40px"
+									press="onPressBPEM">
+									<layoutData>
+										<FlexItemData growFactor="1" />
+									</layoutData>
+								</Image>
+							</HBox>
+						</VBox>
+						<Text text="BPEM CASE" class="dashboardBottomButtonText sapUiTinyMarginTop"/>
+					</VBox>
+					<VBox alignItems="Center" width="155px">
+						<VBox alignItems="Center" height="60px" width="60px" class="dashboardBottomCircles">
+							<HBox alignItems="Center" height="60px">
+								<Image
+									src="image/ProductDetails.png"
+									densityAware="false"
+									width="40px"
+									height="40px"
+									press="onPressProductDetails">
+									<layoutData>
+										<FlexItemData growFactor="1" />
+									</layoutData>
+								</Image>
+							</HBox>
+						</VBox>
+						<Text text="PRODUCT DETAILS" class="dashboardBottomButtonText sapUiTinyMarginTop"/>
+					</VBox>
+					<VBox alignItems="Center" width="155px">
+						<VBox alignItems="Center" height="60px" width="60px" class="dashboardBottomCircles">
+							<HBox alignItems="Center" height="60px">
+								<Image
+									src="image/ConsumptionCalculator.png"
+									densityAware="false"
+									width="40px"
+									height="40px"
+									press="onPressConsumption">
+									<layoutData>
+										<FlexItemData growFactor="1" />
+									</layoutData>
+								</Image>
+							</HBox>
+						</VBox>
+						<Text text="CALCULATE CONSUMPTION" class="dashboardBottomButtonText sapUiTinyMarginTop"/>
+					</VBox>
+					<VBox alignItems="Center" width="155px">
+						<VBox alignItems="Center" height="60px" width="60px" class="dashboardBottomCircles">
+							<HBox alignItems="Center" height="60px">
+								<Image
+									src="image/MyComplaint.png"
+									densityAware="false"
+									width="40px"
+									height="40px"
+									press="onPressMyComplaints">
+									<layoutData>
+										<FlexItemData growFactor="1" />
+									</layoutData>
+								</Image>
+							</HBox>
+						</VBox>
+						<Text text="MY COMPLAINTS" class="dashboardBottomButtonText sapUiTinyMarginTop"/>
+					</VBox>
+				</HBox>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>
