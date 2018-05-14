@@ -15,10 +15,12 @@ sap.ui.define([
 			if(!this._oRouter) this._oRouter = oRouter;
 			
 			this.getView().byId("listBP").setModel(this.getOwnerComponent().getModel("bpListModel"));
-			this.getView().byId("bpTable").setModel(this.getOwnerComponent().getModel("bpTableModel"));
-			this.getView().byId("bpTable").setModel(this.getOwnerComponent().getModel("bpPrefOverviewModel"),"bpPrefOverviewModel");
-			this.getView().byId("bpTable").setModel(this.getOwnerComponent().getModel("bpPrefTypesModel"),"bpPrefTypesModel");
-			this.getView().byId("bpTable").setModel(this.getOwnerComponent().getModel("bpPrefChannelsModel"),"bpPrefChannelsModel");
+			this.getView().byId("tabBillingOverview").setModel(this.getOwnerComponent().getModel("bpBillingOverviewModel"));
+			this.getView().byId("tabPrefOverview").setModel(this.getOwnerComponent().getModel("bpPrefOverviewModel"),"bpPrefOverviewModel");
+			this.getView().byId("tabPrefOverview").setModel(this.getOwnerComponent().getModel("bpPrefTypesModel"),"bpPrefTypesModel");
+			this.getView().byId("tabPrefOverview").setModel(this.getOwnerComponent().getModel("bpPrefChannelsModel"),"bpPrefChannelsModel");
+			this.getView().byId("tabPaymentOverview").setModel(this.getOwnerComponent().getModel("bpPaymentOverviewModel"));
+			this.getView().byId("tabFinancialOverview").setModel(this.getOwnerComponent().getModel("bpFinancialOverviewModel"));
 		},
 
 		/**

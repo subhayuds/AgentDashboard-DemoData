@@ -133,7 +133,7 @@
 									horizontal="false"
 									vertical="true"
 									focusable="true">
-										<t:Table
+									<t:Table
 										id="tabIncidentsInProgress"
 										rows="{/incidents}"
 										selectionMode="None"
@@ -180,8 +180,52 @@
 									</t:Table>
 								</ScrollContainer>
 							</IconTabFilter>
-							<IconTabFilter text="Closed (5)">
-								<Text text="Closed Incident List ..." />
+							<IconTabFilter text="Closed (11)">
+								<t:Table
+									id="tabIncidentsClosed"
+									rows="{/incidents}"
+									selectionMode="None"
+									visibleRowCount="4"
+									cellClick="onPressIncidentClosedList">
+									<t:columns>
+										<t:Column hAlign="Center">
+											<Label text="Incident No." />
+											<t:template>
+												<Label text="{incidentNo}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center">
+											<Label text="Description" />
+											<t:template>
+												<Label text="{description}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center" width="5rem">
+											<Label text="Status" />
+											<t:template>
+												<Label text="{status}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center" width="5rem">
+											<Label text="Priority" />
+											<t:template>
+												<Label text="{priority}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center">
+											<Label text="Target Date" />
+											<t:template>
+												<Label text="{targetDate}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center">
+											<Label text="Creation Date"/>
+											<t:template>
+												<Label text="{creationDate}" />
+											</t:template>
+										</t:Column>
+									</t:columns>
+								</t:Table>
 							</IconTabFilter>
 						</items>
 					</IconTabBar>

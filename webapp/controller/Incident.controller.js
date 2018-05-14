@@ -16,6 +16,7 @@ sap.ui.define([
 			
 			this.getView().byId("tabIncidents").setModel(this.getOwnerComponent().getModel("incidentOpenModel"));
 			this.getView().byId("tabIncidentsInProgress").setModel(this.getOwnerComponent().getModel("incidentInProgressModel"));
+			this.getView().byId("tabIncidentsClosed").setModel(this.getOwnerComponent().getModel("incidentClosedModel"));
 		},
 
 		/**

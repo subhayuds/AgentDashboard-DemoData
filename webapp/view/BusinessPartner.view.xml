@@ -150,7 +150,7 @@
 										press="onPressAddPreference"></Button>
 								</VBox>
 								<t:Table
-									id="bpTabPrefOverview"
+									id="tabPrefOverview"
 									rows="{bpPrefOverviewModel>/items}"
 									selectionMode="MultiToggle"
 									visibleRowCount="2">
@@ -231,7 +231,7 @@
 									</HBox>
 								</VBox>
 								<t:Table
-									id="bpTable"
+									id="tabBillingOverview"
 									rows="{/items}"
 									selectionMode="None"
 									visibleRowCount="3">
@@ -318,13 +318,79 @@
 									</t:columns>
 								</t:Table>
 							</IconTabFilter>
-							<IconTabFilter
-								text="Payment Options Overview">
-								<Text text="Attachments go here ..." />
+							<IconTabFilter text="Payment Overview">
+								<t:Table
+									id="tabPaymentOverview"
+									rows="{/items}"
+									selectionMode="None"
+									visibleRowCount="3">
+									<t:columns>
+										<t:Column hAlign="Center">
+											<Label text="Payment Document No." />
+											<t:template>
+												<Label text="{paymentDocument}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center">
+											<Label text="Posting Date" />
+											<t:template>
+												<Label text="{postingDate}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center" width="5rem">
+											<Label text="Amount Paid" />
+											<t:template>
+												<Label text="{amount}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center" width="7rem">
+											<Label text="Status" />
+											<t:template>
+												<Label text="{status}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center" width="10rem">
+											<Label text="Payment Origin" />
+											<t:template>
+												<Label text="{paymentOrigin}" />
+											</t:template>
+										</t:Column>
+									</t:columns>
+								</t:Table>
 							</IconTabFilter>
-							<IconTabFilter
-								text="Financial Overview">
-								<Text text="Notes go here ..." />
+							<IconTabFilter text="Financial Overview">
+								<t:Table
+									id="tabFinancialOverview"
+									rows="{/items}"
+									selectionMode="None"
+									visibleRowCount="3">
+									<t:columns>
+										<t:Column hAlign="Center">
+											<Label text="Invoice No." />
+											<t:template>
+												<Label text="{invoice}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center">
+											<Label text="Invoice Date" />
+											<t:template>
+												<Label text="{invoiceDate}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center" width="5rem">
+											<Label text="Amount Due" />
+											<t:template>
+												<Label text="{amount}" />
+											</t:template>
+										</t:Column>
+										<t:Column hAlign="Center" width="7rem">
+											<Label text="Due Date" />
+											<t:template>
+												<Label text="{dueDate}" />
+											</t:template>
+										</t:Column>
+									</t:columns>
+								</t:Table>
 							</IconTabFilter>
 						</items>
 					</IconTabBar>

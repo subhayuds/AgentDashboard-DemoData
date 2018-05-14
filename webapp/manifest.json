@@ -38,9 +38,9 @@
 				"type": "JSON",
 				"uri": "model/BPList.json"
 			},
-			"bpTableData": {
+			"bpBillingOverviewData": {
 				"type": "JSON",
-				"uri": "model/BPTable.json"
+				"uri": "model/BPBillingOverview.json"
 			},
 			"bpPrefOverviewData": {
 				"type": "JSON",
@@ -54,6 +54,14 @@
 				"type": "JSON",
 				"uri": "model/BPPrefChannels.json"
 			},
+			"bpPaymentOverviewData": {
+				"type": "JSON",
+				"uri": "model/BPPaymentOverview.json"
+			},
+			"bpFinancialOverviewData": {
+				"type": "JSON",
+				"uri": "model/BPFinancialOverview.json"
+			},
 			"incidentOpenData": {
 				"type": "JSON",
 				"uri": "model/IncidentOpen.json"
@@ -61,6 +69,10 @@
 			"incidentInProgressData": {
 				"type": "JSON",
 				"uri": "model/IncidentInProgress.json"
+			},
+			"incidentClosedData": {
+				"type": "JSON",
+				"uri": "model/IncidentClosed.json"
 			},
 			"activityData": {
 				"type": "JSON",
@@ -150,9 +162,9 @@
 				"dataSource": "bpListData",
 				"preload": true
 			},
-			"bpTableModel": {
+			"bpBillingOverviewModel": {
 				"type": "sap.ui.model.json.JSONModel",
-				"dataSource": "bpTableData",
+				"dataSource": "bpBillingOverviewData",
 				"preload": true
 			},
 			"bpPrefOverviewModel": {
@@ -170,6 +182,16 @@
 				"dataSource": "bpPrefChannelsData",
 				"preload": true
 			},
+			"bpPaymentOverviewModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "bpPaymentOverviewData",
+				"preload": true
+			},
+			"bpFinancialOverviewModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "bpFinancialOverviewData",
+				"preload": true
+			},
 			"activityModel": {
 				"type": "sap.ui.model.json.JSONModel",
 				"dataSource": "activityData",
@@ -183,6 +205,11 @@
 			"incidentInProgressModel": {
 				"type": "sap.ui.model.json.JSONModel",
 				"dataSource": "incidentInProgressData",
+				"preload": true
+			},
+			"incidentClosedModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "incidentClosedData",
 				"preload": true
 			},
 			"bpemModel": {
